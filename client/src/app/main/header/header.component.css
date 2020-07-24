@@ -1,0 +1,147 @@
+/*div.header-wrapper mat-toolbar {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  font-family: "Lucida Grande";*/
+/*  height: 50px !important;*/
+/*  min-height: 50px !important;*/
+/*  background-color: #ffffff!important;*/
+/*  color: #21298a!important;*/
+/*  z-index: 1000;*/
+/*}*/
+
+/*.navbar-brand {*/
+/*  font-size: 16px;*/
+/*  padding-left: 10px;*/
+/*  padding-bottom: 2px;*/
+/*}*/
+
+/*div.small-menu {*/
+/*  position: fixed;*/
+/*  right: 80px;*/
+/*  cursor: pointer;*/
+/*  display: flex;*/
+/*  flex-direction: row-reverse;*/
+/*  border: solid 2px black;*/
+/*}*/
+
+/*div.small-menu .mat-icon {*/
+/*  vertical-align: middle;*/
+/*}*/
+
+
+div.header-wrapper mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Lucida Grande";
+  height: 70px !important;
+  min-height: 70px !important;
+  background-color: #ffffff!important;
+  color: #21298a!important;
+  z-index: 1000;
+}
+
+
+/* @media only screen and (max-width: 900px) {
+  mat-toolbar .mat-tab-nav-bar {
+    display: none;
+  } */
+
+div.small-menu {
+  position: fixed;
+  right: 125px;
+  cursor: pointer;
+}
+
+/* } */
+
+/* @media only screen and (max-width: 1200px) {
+  mat-toolbar .mat-tab-nav-bar a.mat-tab-link span.menu-label {
+    display: none;
+  }
+  mat-toolbar .mat-tab-nav-bar a.mat-tab-link:hover span.menu-label,
+  mat-toolbar .mat-tab-nav-bar a.mat-tab-link.selected span.menu-label {
+    display: none !important;
+  }
+} */
+
+/* div.small-menu {
+  display: none;
+  cursor: pointer;
+} */
+
+div.small-menu .mat-icon {
+  vertical-align: middle;
+}
+
+.navbar-brand {
+  font-size: 16px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+
+a.mat-tab-link {
+  font-size: 13px;
+  font-weight: 100;
+  font-family: IBM Plex Sans;
+  color: #fff;
+  padding: 10px;
+  min-width: 50px;
+}
+
+mat-toolbar .mat-tab-nav-bar a.mat-tab-link span.menu-label {
+  display: none;
+}
+
+mat-toolbar .mat-tab-nav-bar a.mat-tab-link:hover span.menu-label,
+mat-toolbar .mat-tab-nav-bar a.mat-tab-link.selected span.menu-label {
+  display: block;
+}
+
+img {
+  margin-top: 5px;
+}
+
+mat-toolbar div.profile-ico {
+  position: fixed;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: #ebebeb;
+  /*background-image: url('/assets/image/profile-alt.jpg');*/
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+mat-toolbar div.help-ico {
+  position: fixed;
+  right: 70px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+mat-toolbar div.help-ico img {
+  width: 100%;
+  margin: 0px;
+}
+
+mat-toolbar .profile-ico img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 0px;
+}
+
