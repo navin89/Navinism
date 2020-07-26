@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb505cf6-4c56-4acb-872b-182a1fb1f11f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
       <recent name="$PROJECT_DIR$/client/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="npm.build-prod-no-patch">
     <configuration name="HomeComponent" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/client/src/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/client/node_modules/@angular/cli" />
@@ -93,21 +93,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="client" type="js.build_tools.npm" temporary="true">
+    <configuration name="build-prod-no-patch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="build-prod-no-patch" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="client" type="js.build_tools.npm" temporary="true">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
       <scripts>
-        <script value="e2e" />
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -126,17 +126,17 @@
     <list>
       <item itemvalue="Karma.HomeComponent" />
       <item itemvalue="npm.build client" />
-      <item itemvalue="npm.e2e" />
       <item itemvalue="npm.server" />
       <item itemvalue="npm.client" />
+      <item itemvalue="npm.build-prod-no-patch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build-prod-no-patch" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.build client" />
         <item itemvalue="npm.client" />
         <item itemvalue="Karma.HomeComponent" />
-        <item itemvalue="npm.e2e" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +164,7 @@
       <workItem from="1594728585268" duration="18713000" />
       <workItem from="1595613755443" duration="11000" />
       <workItem from="1595614283965" duration="190000" />
-      <workItem from="1595616398260" duration="3455000" />
+      <workItem from="1595616398260" duration="4912000" />
     </task>
     <servers />
   </component>
@@ -192,7 +192,7 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="408" y="205" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1594470390812" />
-    <state width="1398" height="184" key="GridCell.Tab.0.bottom" timestamp="1595740690529">
+    <state width="1398" height="184" key="GridCell.Tab.0.bottom" timestamp="1595776876182">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1878" height="195" key="GridCell.Tab.0.bottom/0.0.1440.900/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593884882426" />
@@ -200,8 +200,8 @@
     <state width="1642" height="414" key="GridCell.Tab.0.bottom/0.23.1440.877/-206.-1057.1920.1057@-206.-1057.1920.1057" timestamp="1593970596328" />
     <state width="1398" height="184" key="GridCell.Tab.0.bottom/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1595623328829" />
     <state width="1878" height="505" key="GridCell.Tab.0.bottom/0.23.1440.877/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593879367070" />
-    <state width="1398" height="184" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1595740690529" />
-    <state width="1398" height="184" key="GridCell.Tab.0.center" timestamp="1595740690528">
+    <state width="1398" height="184" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1595776876182" />
+    <state width="1398" height="184" key="GridCell.Tab.0.center" timestamp="1595776876181">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1878" height="195" key="GridCell.Tab.0.center/0.0.1440.900/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593884882425" />
@@ -209,8 +209,8 @@
     <state width="1642" height="414" key="GridCell.Tab.0.center/0.23.1440.877/-206.-1057.1920.1057@-206.-1057.1920.1057" timestamp="1593970596327" />
     <state width="1398" height="184" key="GridCell.Tab.0.center/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1595623328828" />
     <state width="1878" height="505" key="GridCell.Tab.0.center/0.23.1440.877/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593879367068" />
-    <state width="1398" height="184" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1595740690528" />
-    <state width="1398" height="184" key="GridCell.Tab.0.left" timestamp="1595740690527">
+    <state width="1398" height="184" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1595776876181" />
+    <state width="1398" height="184" key="GridCell.Tab.0.left" timestamp="1595776876180">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1878" height="195" key="GridCell.Tab.0.left/0.0.1440.900/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593884882425" />
@@ -218,8 +218,8 @@
     <state width="1642" height="414" key="GridCell.Tab.0.left/0.23.1440.877/-206.-1057.1920.1057@-206.-1057.1920.1057" timestamp="1593970596327" />
     <state width="1398" height="184" key="GridCell.Tab.0.left/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1595623328827" />
     <state width="1878" height="505" key="GridCell.Tab.0.left/0.23.1440.877/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593879367067" />
-    <state width="1398" height="184" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1595740690527" />
-    <state width="1398" height="184" key="GridCell.Tab.0.right" timestamp="1595740690528">
+    <state width="1398" height="184" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1595776876180" />
+    <state width="1398" height="184" key="GridCell.Tab.0.right" timestamp="1595776876182">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1878" height="195" key="GridCell.Tab.0.right/0.0.1440.900/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593884882426" />
@@ -227,7 +227,7 @@
     <state width="1642" height="414" key="GridCell.Tab.0.right/0.23.1440.877/-206.-1057.1920.1057@-206.-1057.1920.1057" timestamp="1593970596327" />
     <state width="1398" height="184" key="GridCell.Tab.0.right/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1595623328829" />
     <state width="1878" height="505" key="GridCell.Tab.0.right/0.23.1440.877/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593879367068" />
-    <state width="1398" height="184" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1595740690528" />
+    <state width="1398" height="184" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1595776876182" />
     <state width="1398" height="514" key="GridCell.Tab.1.bottom" timestamp="1594486206756">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
