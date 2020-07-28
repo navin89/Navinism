@@ -15,8 +15,12 @@ export class HomeComponent extends BaseContextService implements OnInit, OnDestr
 
   refreshSub;
   isLoading = true;
-  picOfDayTitle;
-  picOfTheDayImg;
+  podTitle;
+  podImg;
+  podDate;
+  podCopyRight;
+  podDescription;
+
 
   constructor(private homesvc: HomeService, private http: HttpClient) {
     super();
@@ -25,24 +29,26 @@ export class HomeComponent extends BaseContextService implements OnInit, OnDestr
 
 
   ngOnInit(): void {
-    console.log(`InFITniti Home component loaded`);
+    console.log(`Navinism Dashboard Component loaded`);
     this.loadData();
-
   }
 
   ngOnDestroy(): void {}
 
   loadData() {
     setTimeout( ()=> {
+
       this.homesvc.getPictureOfTheDayService().then(async (result: any)=> {
-        const parsedRes = JSON.parse(result.data);
-        // console.log(`Parsed`, parsedRes);
-        this.picOfDayTitle = parsedRes.title;
-        this.picOfTheDayImg = parsedRes.pic;
+
+        const parsedResp = JSON.parse(result.data);
+        this.podTitle = parsedResp.title;
+        this.podDate = parsedResp.date;
+        this.podCopyRight = parsedResp.copyright;
+        this.podDescription = parsedResp.desc;
 
       }, error=> {
         // console.log(`at the front err= `, error);
-        this.picOfDayTitle = "NO PICTURE";
+        this.podTitle = "NO PICTURE";
       });
 
       this.isLoading = false;

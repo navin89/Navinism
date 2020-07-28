@@ -7,6 +7,8 @@ const fetch = require('node-fetch');
 const path = require('path');
 const request = require('request');
 const nasaUrl = process.env.nasa_api_url+process.env.nasa_api_key;
+const dbService = require('../../database/db-service');
+const util = require('../../util/util');
 
 /* REDIS */
 const redis = require('redis');
@@ -32,6 +34,8 @@ redisClient.on('error',()=> {
 
 // ------------------------------------------------------------
 
+/** 3rd Party API CALLS */
+
 /**
  * @description
  * Api call retrieves entire object for the
@@ -54,7 +58,6 @@ const picOfTheDayCall = async (header)=> {
                reject(error);
                return console.error(`Pic of the day service failed: `, error);
            } else {
-               console.log(`over here worked`);
                resolve(body);
            }
 
@@ -97,6 +100,7 @@ const getPictureForTheDay = async (urlParam)=> {
     });
 }
 
+/** REDIS CALLS */
 
 /**
  * @description
@@ -166,9 +170,56 @@ const getKeysPicOfTheDay = async ()=> {
 }
 
 
+/** DB CALLS */
+
+const findPodExistenceDAL = (todayDate) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            // compare with today's date
+            // console.log(`DATE REC: `, todayDate);
+            let findPodExistenceQuery = `SELECT * FROM apod`;
+            let outputDb  = await dbService.query(findPodExistenceQuery);
+            // console.log(`OUTPUT: `, outputDb);
+
+            resolve(outputDb);
+
+        } catch (error) {
+            console.log(`ERROR: findPodExistenceDAL(): `, error);
+            reject(error);
+        }
+    });
+}
+
+const insertPodDAL = (podObject, todaysDate) => {
+
+    return new Promise(async(resolve, reject) => {
+        try {
+            // console.log(`POD OBJECT: \n\n`, JSON.parse(podObject));
+            let parsedObj = JSON.parse(podObject);
+            let findPodExistenceQuery = `INSERT INTO apod (DATE_ISSUE, TITLE, COPYRIGHT, DESCRIPTION, HDURL)
+            VALUES('${util.escapeSingleQuote(todaysDate)}', '${util.escapeSingleQuote(parsedObj.title)}', 
+            '${util.escapeSingleQuote(parsedObj.copyright)}', '${util.escapeSingleQuote(parsedObj.explanation)}',
+            '${util.escapeSingleQuote(parsedObj.hdurl)}' )`;
+            let outputDb  = await dbService.query(findPodExistenceQuery);
+            resolve(outputDb);
+
+        } catch (error) {
+            console.log(`ERROR: insertPodDAL(): `, error);
+            reject(error);
+        }
+    });
+}
+
+
+
+
+
+
 module.exports = {
     picOfTheDayCall,
     getPictureForTheDay,
     setKeysPicOfTheDay,
-    getKeysPicOfTheDay
+    getKeysPicOfTheDay,
+    findPodExistenceDAL,
+    insertPodDAL
 }

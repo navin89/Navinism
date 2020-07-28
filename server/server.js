@@ -45,7 +45,7 @@ app.use(csp({
         'script-src': [csp.SELF, "'unsafe-eval'", "'unsafe-inline'"],
         'style-src': [csp.SELF, "'unsafe-inline'", 'https://fonts.googleapis.com'],
         'font-src': [csp.SELF, 'https://fonts.gstatic.com'],
-        'img-src': [csp.SELF, 'data:'],
+        'img-src': [csp.SELF, 'data: http://localhost:3010'],
         'connect-src': [csp.SELF, process.env.PORTAL_URI, 'http://localhost:3010']
     }
 }));

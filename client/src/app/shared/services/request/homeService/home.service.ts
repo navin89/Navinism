@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {BaseContextService} from "../../base-context.service";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 const httpHeaders: HttpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+const httpImageHeaders: HttpHeaders = new HttpHeaders({'Content-Type': 'multipart/form-data' });
 import {backendUri} from '../../../common/constants';
 
 
@@ -14,12 +15,13 @@ export class HomeService extends BaseContextService {
     super();
   }
 
+
+
   getPictureOfTheDayService() {
     return new Promise((resolve, reject) => {
-      this.http.get(backendUri + '/api/picOfTheDaySvc', {headers: httpHeaders})
+      this.http.get(backendUri + '/api/picOfTheDaySvc')
         .subscribe(
           (data: any) => {
-                  // console.log(`GOT THE DATA FRONTEND SERVICE: \n`, data);
                   if (data.status === 200) {
                     resolve(data);
                   } else {
@@ -27,10 +29,11 @@ export class HomeService extends BaseContextService {
                   }
                 },
                 error => {
-                  console.log(error);
+                  console.log(`ERROR[getPictureOfTheDayService()]: `, error);
                   reject(error);
                 }
       );
     });
   }
+
 }

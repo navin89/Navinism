@@ -162,27 +162,75 @@ div.header-toolbar-wrapper div.divider {
 .body-wrapper {
   margin: 20px;
   height: calc(100% - 260px);
-  min-height: 525px;
+  min-height: 1000px;
   elevation: higher;
   box-shadow: 1px 1px 15px rgba(0,0,0,.14);
-  /*border: 2px solid black;*/
+  border: 2px solid black;
 }
 
-.picOfDayWrapper {
-
-  margin: 5px;
+.podWrapper {
+  width: 50%;
   box-shadow: 1px 1px 14px rgba(0,0,0,.14);
   /*border: 2px solid black;*/
 }
 
-.picOfDayTitle {
+.mat-card-title {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  align-content: center;
   border: 2px solid black;
 }
 
+.podTitle {
+  margin-top: 8px;
+  width: 100%;
+  /*border: 2px solid black;*/
+}
 
+.podDesc {
+  margin-top: 2px;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.imageOfTheDay {
+  margin: 8px;
+  height: 450px;
+  width: 550px;
+  max-width: 100%;
+  display: block;
+}
+
+.podCopyright {
+  padding: 8px;
+  background-color: #2e3951;
+  color: #eceff1;
+}
+
+article {
+  max-width: 940px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+article::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.content {
+  float: right;
+  width: 100%;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+
+
+
+/* OTHER SCREENS */
 @media only screen and (max-width: 600px) {
   .body-wrapper {
     max-height: 650px;

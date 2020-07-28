@@ -3,7 +3,6 @@
 let navinismService = require('./navinismService');
 
 module.exports = {
-
-    picOfTheDaySvc: navinismService.picOfTheDaySvc
-
+    picOfTheDaySvc: navinismService.picOfTheDaySvc,
+    getPicOfTheDay: navinismService.getPicOfTheDay
 };

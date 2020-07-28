@@ -9,18 +9,32 @@
   <div class="spacer70"></div>
 
   <div class="body-wrapper">
-    <mat-card class="picOfDayWrapper">
-      <mat-card-header>
-        <mat-card-content class="picOfDayTitle">
-            <mat-card-title>
-              {{picOfDayTitle}}
-            </mat-card-title>
+    <article>
+      <mat-card class="podWrapper content">
+        <mat-card-title-group>
+          <mat-card-title class="podTitle">
+            {{podTitle}}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{podDate}}
+          </mat-card-subtitle>
+          <img mat-card-image class="imageOfTheDay" src="http://localhost:3010/image/getPicOfTheDay" alt="podImg"  />
+        </mat-card-title-group>
+
+        <mat-card-content>
+          <div class="podDesc">
+            {{podDescription}}
+          </div>
         </mat-card-content>
-      </mat-card-header>
-      <img mat-card-image src="../../assets/picOfTheDay.png" alt="picOfTheDayImg"  />
 
+        <mat-card-footer>
+          <div class="podCopyright">
+            {{podCopyRight}}
+          </div>
+        </mat-card-footer>
+      </mat-card>
+    </article>
 
-    </mat-card>
   </div>
 
 </div>
