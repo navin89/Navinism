@@ -36,7 +36,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-// , 'https://apod.nasa.gov'
 let csp = require('express-csp-header');
 app.use(csp({
     policies: {
@@ -44,7 +43,7 @@ app.use(csp({
         'script-src': [csp.SELF, "'unsafe-eval'", "'unsafe-inline'"],
         'style-src': [csp.SELF, "'unsafe-inline'", 'https://fonts.googleapis.com'],
         'font-src': [csp.SELF, 'https://fonts.gstatic.com'],
-        'img-src': [csp.SELF, 'data:'],
+        'img-src': [csp.SELF, 'data:', process.env.PORTAL_URI],
         'connect-src': [csp.SELF, process.env.PORTAL_URI]
     }
 }));
