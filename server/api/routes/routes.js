@@ -8,7 +8,7 @@ module.exports = function (express, app, passport) {
     const navinismServices = require('../module/dashboard/index');
 
     app.route('/api/picOfTheDaySvc').get(navinismServices.picOfTheDaySvc);
-    app.route('/image/getPicOfTheDay').get(navinismServices.getPicOfTheDay);
+    app.route('/api/getPicOfTheDay').get(navinismServices.getPicOfTheDay);
 
     if (process.env.DEPLOY === 'NGINX') {
         app.use(express.static('/home/navin89/app/dist/client', { maxAge: '2y' }));
