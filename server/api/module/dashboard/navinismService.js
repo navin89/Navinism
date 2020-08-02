@@ -3,24 +3,28 @@ const util = require("../../util/index");
 const navinismDal = require('./navinism.dal');
 const fs = require('fs');
 const path = require('path');
-var moment = require('moment'); // require
+const momentTZ = require('moment-timezone');
+const moment = require('moment');
 moment().format();
 
 let picOfTheDayObject = {
     copyright: null,
     date: null,
     desc: null,
-    title: null,
-    pic: null
+    title: null
 }
 
+/**
+ * @description
+ * */
 const picOfTheDaySvc = async (req, res)=> {
-
+    // TODO: NEED TO DOUBLE CHECK DATE CONFLICTS; just monitor...
     let header = req.headers;
     try {
         let dataObj;
-        let today = new Date(); //today
-        let now = moment(today).format("YYYY-MM-DD"); //format
+        let today = new Date();
+        let conv = momentTZ.tz(today, "America/New_York"); //today formatted back to America's timezone!
+        let now = conv.format("YYYY-MM-DD"); //format to YYYY-MM-DD
         dataObj = await findPodExistence(now);
 
         if (dataObj.length === 0) {
@@ -50,11 +54,18 @@ const picOfTheDaySvc = async (req, res)=> {
 
 };
 
-const getPicOfTheDay = async (req, res)=> {
+const getPicOfTheDay = async (req, res, next)=> {
 
     const directory = 'api/module/assets/';
     let imgStr =null;
     res.setHeader('Content-Type', 'multipart/form-data');
+    let options = {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            'x-timestamp': Date.now(),
+            'x-sent': true
+        }
+    }
 
     fs.readdir(directory, (err, files) => {
         if (err) throw err;
@@ -64,7 +75,13 @@ const getPicOfTheDay = async (req, res)=> {
         });
 
         let finalPath = path.join(__dirname, '../assets')
-        res.status(200).sendFile( finalPath+'/'+imgStr);
+        res.status(200).sendFile( finalPath+'/'+imgStr, options, function (err) {
+            if (err) {
+                next(err)
+            } else {
+                console.log('Sent-[POD Image File]: ', finalPath+'/'+imgStr)
+            }
+        });
     });
 
 };

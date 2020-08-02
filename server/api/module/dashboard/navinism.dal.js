@@ -10,6 +10,9 @@ const nasaUrl = process.env.nasa_api_url+process.env.nasa_api_key;
 const dbService = require('../../database/db-service');
 const util = require('../../util/util');
 
+
+// TODO: REDIS MIGHT BE TAKEN OUT IN THE NEAR FUTURE!
+
 /* REDIS */
 const redis = require('redis');
 const redisClient = redis.createClient({
@@ -68,11 +71,15 @@ const picOfTheDayCall = async (header)=> {
 
 /**
  * @description
- * get picture of the day in png format
- * and insert into assets dir
+ * get picture of the day in png format by making a network call
+ * and insert into assets directory.
  *
+ * @return image
  * */
 const getPictureForTheDay = async (urlParam)=> {
+
+    // TODO: NEED TO REFACTOR TO STOP NETWORK CALLS IF NOT NEEDED...
+    //  For example - if the call is for the same day and just pull image from dir
 
     return new Promise((resolve, reject) => {
         const directory = 'api/module/assets/';
