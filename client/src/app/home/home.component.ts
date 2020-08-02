@@ -40,6 +40,7 @@ export class HomeComponent extends BaseContextService implements OnInit, OnDestr
 
       this.homesvc.getPictureOfTheDayService().then(async (result: any)=> {
 
+        console.log(`FRONTEND: `, JSON.parse(result.data));
         const parsedResp = JSON.parse(result.data);
         this.podTitle = parsedResp.title;
         this.podDate = parsedResp.date;

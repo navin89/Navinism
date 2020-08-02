@@ -3,6 +3,8 @@ const util = require("../../util/index");
 const navinismDal = require('./navinism.dal');
 const fs = require('fs');
 const path = require('path');
+var moment = require('moment'); // require
+moment().format();
 
 let picOfTheDayObject = {
     copyright: null,
@@ -16,33 +18,35 @@ const picOfTheDaySvc = async (req, res)=> {
 
     let header = req.headers;
     try {
-        let today = new Date();
-        const findPodCallResult = await findPodExistence(today.toISOString());
-        console.log(`RESULT FOUND: `,findPodCallResult);
+        let dataObj;
+        let today = new Date(); //today
+        let now = moment(today).format("YYYY-MM-DD"); //format
+        dataObj = await findPodExistence(now);
 
-
-        if (findPodCallResult === true) {
+        if (dataObj.length === 0) {
             const podCallResult = await navinismDal.picOfTheDayCall(header);
-            await navinismDal.insertPodDAL(podCallResult, today.toISOString());
-            let dataObj = JSON.parse(podCallResult);
-            // console.log(`\n\nURL: `, dataObj);
-            await navinismDal.getPictureForTheDay(dataObj.hdurl);
-            // set to redis using dal
-            // await navinismDal.setKeysPicOfTheDay();
+            await navinismDal.insertPodDAL(podCallResult);
+            dataObj = await findPodExistence(now);
+            await navinismDal.getPictureForTheDay(dataObj[0].hdurl);
+            picOfTheDayObject.copyright = dataObj[0].copyright;
+            picOfTheDayObject.date = dataObj[0].date_issue;
+            picOfTheDayObject.desc = dataObj[0].description;
+            picOfTheDayObject.title = dataObj[0].title;
 
-            picOfTheDayObject.copyright = dataObj.copyright;
-            picOfTheDayObject.date = dataObj.date;
-            picOfTheDayObject.desc = dataObj.explanation;
-            picOfTheDayObject.title = dataObj.title;
+        } else {
 
-            res.send(util.assembleResponse(200, JSON.stringify(picOfTheDayObject)));
+            picOfTheDayObject.copyright = dataObj[0].copyright;
+            picOfTheDayObject.date = dataObj[0].date_issue;
+            picOfTheDayObject.desc = dataObj[0].description;
+            picOfTheDayObject.title = dataObj[0].title;
         }
+
+        res.send(util.assembleResponse(200, JSON.stringify(picOfTheDayObject)));
 
     } catch (e) {
         console.log(`ERROR: ${e.getErrorMessage}`);
         res.status(500).send(e);
     }
-
 
 };
 
@@ -69,9 +73,7 @@ const getPicOfTheDay = async (req, res)=> {
 const findPodExistence = async (todaysDate) => {
 
     try {
-        const retValue = await navinismDal.findPodExistenceDAL(todaysDate);
-        return retValue.length !== 0;
-
+        return await navinismDal.findPodExistenceDAL(todaysDate);
     } catch (error) {
         console.log(`ERROR findPodExistence(): ${error}`);
         return error;

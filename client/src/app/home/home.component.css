@@ -165,7 +165,7 @@ div.header-toolbar-wrapper div.divider {
   min-height: 1000px;
   elevation: higher;
   box-shadow: 1px 1px 15px rgba(0,0,0,.14);
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
 
 .podWrapper {
@@ -177,8 +177,9 @@ div.header-toolbar-wrapper div.divider {
 .mat-card-title {
   width: 100%;
   align-content: center;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
+
 
 .podTitle {
   margin-top: 8px;
@@ -189,7 +190,7 @@ div.header-toolbar-wrapper div.divider {
 .podDesc {
   margin-top: 2px;
   width: 100%;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
 
 .imageOfTheDay {
@@ -206,29 +207,6 @@ div.header-toolbar-wrapper div.divider {
   color: #eceff1;
 }
 
-article {
-  max-width: 940px;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-article::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-.content {
-  float: right;
-  width: 100%;
-  color: #ccc;
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 4px;
-  padding: 10px;
-}
-
-
-
 
 /* OTHER SCREENS */
 @media only screen and (max-width: 600px) {
@@ -241,146 +219,7 @@ article::after {
   }
 }
 
-.body-wrapper .main-panel-wrapper {
-  padding: 0px 15px;
-}
 
-.body-wrapper .main-panel-wrapper .week {
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  color: #0a5ab3;
-  line-height: 42px;
-}
-
-.body-wrapper .main-panel-wrapper mat-button-toggle-group {
-  font-size: 10px;
-  height: 25px;
-  margin: 17px 0px;
-  position: absolute;
-  top: 0px;
-  right: 15px;
-}
-
-::ng-deep .body-wrapper .main-panel-wrapper mat-button-toggle-group .mat-button-toggle-label-content {
-  line-height: 25px !important;
-}
-
-.body-wrapper .main-panel-wrapper .tag-filter {
-  font-size: 12px;
-  padding: 10px;
-}
-
-::ng-deep .tag-filter .mat-form-field-wrapper {
-  padding-bottom: 0px !important;
-}
-
-.body-wrapper .main-panel-wrapper .tag-filter mat-form-field {
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.body-wrapper .side-panel-wrapper {
-  /* height: 100%; */
-}
-
-.body-wrapper .side-panel-wrapper .year {
-  justify-content: center;
-  text-align: center;
-  font-size: 25px;
-  color: #0a5ab3;
-}
-
-.body-wrapper .side-panel-wrapper .months {
-  height: calc((100% - 80px) / 3);
-  border-right: inset 2px silver;
-  border-left: inset 2px silver;
-  font-size: 30px;
-}
-
-.body-wrapper .side-panel-wrapper .months.last {
-  min-height: 100px;
-  border-bottom: inset 2px silver;
-}
-
-.body-wrapper .side-panel-wrapper .months .month {
-  text-align: center;
-  border: inset 1px silver;
-}
-
-.body-wrapper .side-panel-wrapper .div-group {
-  box-shadow: 1px 1px 15px rgba(0,0,0,.14);
-  border: 1px solid hsla(0,0%,100%,0);
-  padding: 5px;
-  min-height: 150px;
-}
-
-.body-wrapper .side-panel-wrapper .title {
-  font-size: 13px;
-  font-style: italic;
-  font-weight: 700;
-}
-
-.body-wrapper .side-panel-wrapper .event {
-  font-size: 14px;
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-
-.body-wrapper .side-panel-wrapper .divider {
-  height: 25px;
-}
-
-.footer-wrapper {
-  margin: 0px 10px !important;
-  filter: blur(5px);
-}
-
-.body-wrapper .blogs {
-  padding: 0px;
-}
-
-.body-wrapper .blogs .blog {
-  min-height: 125px;
-  margin-bottom: 20px;
-}
-
-.body-wrapper .blogs .market-container {
-  box-shadow: 1px 1px 15px rgba(0,0,0,.14);
-  border: 1px solid hsla(0,0%,100%,0);
-  height: 100%;
-  padding: 5px;
-}
-
-.body-wrapper .blogs .market-container .market-title {
-  background-image: linear-gradient(-120deg, #2e63c7 13%, #748de8 59%, #ff6b81 100% );
-  text-align: center;
-  color: white;
-  opacity: 0.8;
-  margin-bottom: 5px;
-}
-
-.body-wrapper .blogs  .topic {
-  cursor: pointer;
-  font-size: 14px;
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-}
-
-.body-wrapper .show-weekends-toggle {
-  display: block;
-  text-align: right;
-}
-
-.body-wrapper .show-weekends-toggle mat-slide-toggle {
-  transform: scale(0.7);
-  margin-right: -20px;
-}
-
-::ng-deep .cal-month-view span {
-  font-size: 14px !important;
-}
 
 /* ::ng-deep .cal-month-view .cal-header .cal-cell {
   font-size: 12px !important;

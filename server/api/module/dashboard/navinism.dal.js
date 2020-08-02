@@ -100,117 +100,57 @@ const getPictureForTheDay = async (urlParam)=> {
     });
 }
 
-/** REDIS CALLS */
-
-/**
- * @description
- * Set appropriate keys=>value for the picture of the day
- * api call into redis cache.
- * Expiry time is 24hrs
- *
- * */
-const setKeysPicOfTheDay = async ()=> {
-    let imgStr;
-    const directory = 'api/module/assets/';
-
-    return new Promise((resolve, reject) => {
-        fs.readdir(directory, (err, files) => {
-            if (err) throw err;
-
-            files.forEach((file)=> {
-                // imgStr = file;
-                redisClient.set("pic_of_the_day", file, (err, reply)=> {
-                    if(err !== null){
-                        console.log(`ERROR SAVING to REDIS: `, err);
-                        reject(err);
-                    }
-                    else {
-                        console.log(`Saved to REDIS: `, reply);
-                        resolve(reply);
-                    }
-
-                });
-            });
-
-        });
-
-    });
-}
-
-/**
- * @description
- * Get appropriate keys=>value for the picture of the day
- * from redis cache.
- *
- * */
-const getKeysPicOfTheDay = async ()=> {
-
-    let outputObj = { avail: null, strPic: null };
-
-    return new Promise((resolve, reject) => {
-        redisClient.get("pic_of_the_day", (err, reply)=> {
-
-            if (err !== null) {
-                console.log(`Error in getting key from REDIS: `,err);
-                reject(outputObj);
-            }else if (reply === null) {
-                console.log(`No value for given key`);
-                outputObj.avail = false;
-                resolve(outputObj);
-            }else {
-                console.log(`Value gotten: `, reply);
-                // TODO: must change to true
-                outputObj.avail = false;
-                outputObj.strPic = reply;
-                resolve(outputObj);
-            }
-        });
-
-    });
-}
-
 
 /** DB CALLS */
 
+/**
+ * @description
+ * Method finds for existing data from DB table
+ *
+ * @return arrayOfObjects - the result data from DB table.
+ * @return error - if finding of data invokes an error
+ * */
 const findPodExistenceDAL = (todayDate) => {
     return new Promise(async (resolve, reject) => {
         try {
-            // compare with today's date
-            // console.log(`DATE REC: `, todayDate);
-            let findPodExistenceQuery = `SELECT * FROM apod`;
-            let outputDb  = await dbService.query(findPodExistenceQuery);
-            // console.log(`OUTPUT: `, outputDb);
 
+            let findPodExistenceQuery = `SELECT * FROM apod 
+                                            WHERE date_issue= '${util.escapeSingleQuote(todayDate)}'`;
+            let outputDb  = await dbService.query(findPodExistenceQuery);
             resolve(outputDb);
 
         } catch (error) {
-            console.log(`ERROR: findPodExistenceDAL(): `, error);
+            console.log(`ERROR: findPodExistenceDAL(): `, error); //log error
             reject(error);
         }
     });
 }
 
-const insertPodDAL = (podObject, todaysDate) => {
+/**
+ * @description
+ * Method inserts POD data into DB table
+ *
+ * @return true - if transaction was successful
+ * @return false - if transaction was un-successful
+ * */
+const insertPodDAL = (podObject) => {
 
     return new Promise(async(resolve, reject) => {
         try {
-            // console.log(`POD OBJECT: \n\n`, JSON.parse(podObject));
             let parsedObj = JSON.parse(podObject);
             let findPodExistenceQuery = `INSERT INTO apod (DATE_ISSUE, TITLE, COPYRIGHT, DESCRIPTION, HDURL)
-            VALUES('${util.escapeSingleQuote(todaysDate)}', '${util.escapeSingleQuote(parsedObj.title)}', 
+            VALUES('${util.escapeSingleQuote(parsedObj.date)}', '${util.escapeSingleQuote(parsedObj.title)}', 
             '${util.escapeSingleQuote(parsedObj.copyright)}', '${util.escapeSingleQuote(parsedObj.explanation)}',
             '${util.escapeSingleQuote(parsedObj.hdurl)}' )`;
-            let outputDb  = await dbService.query(findPodExistenceQuery);
-            resolve(outputDb);
+            await dbService.query(findPodExistenceQuery);
+            resolve(true);
 
         } catch (error) {
-            console.log(`ERROR: insertPodDAL(): `, error);
-            reject(error);
+            console.log(`ERROR: insertPodDAL(): `, error); // log error
+            reject(false);
         }
     });
 }
-
-
 
 
 
@@ -218,8 +158,6 @@ const insertPodDAL = (podObject, todaysDate) => {
 module.exports = {
     picOfTheDayCall,
     getPictureForTheDay,
-    setKeysPicOfTheDay,
-    getKeysPicOfTheDay,
     findPodExistenceDAL,
     insertPodDAL
 }
