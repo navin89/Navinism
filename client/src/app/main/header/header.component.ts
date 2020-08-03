@@ -7,13 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-
-  constructor() {
-
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    console.log(`Header Component Loaded.....`);
+    // console.log(`Header Component Loaded.....`);
   }
 
 }

@@ -1,0 +1,40 @@
+<mat-card class="main-card">
+  <mat-card-header>
+    <div mat-card-avatar class="application-icon"></div>
+    <mat-card-title class="podTitle">
+      {{podTitle}}
+    </mat-card-title>
+    <mat-card-subtitle class="podDate">
+      {{podDate}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="pb-wrapper">
+      <mat-progress-bar mode="indeterminate" [hidden]="!isLoading"></mat-progress-bar>
+    </div>
+
+    <div [hidden]="!isDashboardReady">
+      <img mat-card-image class="imageOfTheDay" src="{{podImg}}" alt="podImg"  />
+    </div>
+    <div class="podDesc" [hidden]="!isDashboardReady">
+      {{podDescription}}
+    </div>
+
+  </mat-card-content>
+  <mat-card-footer>
+    <div class="podCopyright" [hidden]="!isDashboardReady">
+      &#169; {{podCopyRight}}
+    </div>
+    <mat-card-actions>
+      <mat-slide-toggle [(ngModel)]="isAutoRefresh" (toggleChange)="autoRefresh()">Helpful</mat-slide-toggle>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>
+
+<!--<div class="modal-progress" [hidden]="!isLoading">-->
+<!--  <div class="bg-cover"></div>-->
+<!--  <div class="gif-wrapper">-->
+<!--    <img src="/assets/telescopeAnimation.gif" />-->
+<!--  </div>-->
+<!--  <div class="loading-desc">Please wait while we load our Cosmos...</div>-->
+<!--</div>-->

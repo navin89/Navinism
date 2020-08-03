@@ -16,7 +16,6 @@ export class HomeService extends BaseContextService {
   }
 
 
-
   getPictureOfTheDayService() {
     return new Promise((resolve, reject) => {
       this.http.get(backendUri + '/api/picOfTheDaySvc')
@@ -33,6 +32,22 @@ export class HomeService extends BaseContextService {
                   reject(error);
                 }
       );
+    });
+  }
+
+  // TODO: NEED TO FIX TO ENABLE API CALLS..
+  getPodPicture() {
+    return new Promise((resolve, reject) => {
+      this.http.get(backendUri + '/api/getPicOfTheDay')
+        .subscribe(
+          (data: any) => {
+            console.log(`WHAT DATA: `, data);
+          },
+          error => {
+            console.log(`ERROR[getPodPicture()]: `, error);
+            reject(error);
+          }
+        );
     });
   }
 

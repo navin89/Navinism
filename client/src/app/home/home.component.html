@@ -1,41 +1,17 @@
-<div class="home-wrapper">
-  <div class="header-wrapper">
-    <div class="title">Picture of the Day</div>
+<div class="top-wrapper">
+    <div class="title">Our Cosmos</div>
 
     <div class="header-toolbar-wrapper">
-
+      <div title="Reload Data" class="icon tool-refresh" (click)="reload()">
+        <img src="/assets/refresh.png"/>
+      </div>
+    </div>
+</div>
+<div class="body-wrapper">
+  <div class="row">
+    <div class="ar-wrapper col-lg-6 col-md-12">
+      <app-pod></app-pod>
     </div>
   </div>
-  <div class="spacer70"></div>
-
-  <div class="body-wrapper">
-    <article>
-      <mat-card class="podWrapper">
-        <mat-card-title-group>
-          <mat-card-title class="podTitle">
-            {{podTitle}}
-          </mat-card-title>
-          <mat-card-subtitle>
-            {{podDate}}
-          </mat-card-subtitle>
-          <img mat-card-image class="imageOfTheDay" src="http://navinism.org/api/getPicOfTheDay" alt="podImg"  />
-        </mat-card-title-group>
-
-        <mat-card-content>
-          <div class="podDesc">
-            {{podDescription}}
-          </div>
-        </mat-card-content>
-
-        <mat-card-footer>
-          <div class="podCopyright">
-            {{podCopyRight}}
-          </div>
-        </mat-card-footer>
-      </mat-card>
-    </article>
-
-  </div>
-
 </div>
 

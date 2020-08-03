@@ -120,7 +120,6 @@ const getPictureForTheDay = async (urlParam)=> {
 const findPodExistenceDAL = (todayDate) => {
     return new Promise(async (resolve, reject) => {
         try {
-
             let findPodExistenceQuery = `SELECT * FROM apod 
                                             WHERE date_issue= '${util.escapeSingleQuote(todayDate)}'`;
             let outputDb  = await dbService.query(findPodExistenceQuery);

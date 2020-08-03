@@ -37,7 +37,7 @@ function changeIndex(currentfilename, changedfilename) {
   };
   try {
     let changedFiles = replaceFile.sync(options);
-    if (changedFiles == 0) {
+    if (changedFiles === 0) {
       console.log("File updated failed");
     } else if (changedFiles[0].hasChanged === false) {
       console.log("File already updated");

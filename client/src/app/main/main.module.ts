@@ -19,32 +19,40 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatIconModule} from "@angular/material/icon";
 import { NearEarthObjComponent } from './near-earth-obj/near-earth-obj.component';
 import {MatTableModule} from "@angular/material/table";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {PodComponent} from "../home/pod/pod.component";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
-    imports: [
-        MDBBootstrapModule.forRoot(),// watch out for this
-        MatDialogModule,
-        DragDropModule,
-        CdkTableModule,
-        MatCardModule,
-        FormsModule,
-        ReactiveFormsModule,
-        BrowserModule,
-        CommonModule,
-        HttpClientModule,
-        MainRoutingModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatMenuModule,
-        MatTooltipModule,
-        MatIconModule,
-        MatTableModule
-    ],
+  imports: [
+    MDBBootstrapModule.forRoot(),// watch out for this
+    MatDialogModule,
+    DragDropModule,
+    CdkTableModule,
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    CommonModule,
+    HttpClientModule,
+    MainRoutingModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatTooltipModule,
+    MatIconModule,
+    MatTableModule,
+    FlexLayoutModule,
+    MatProgressBarModule,
+    MatSlideToggleModule
+  ],
   declarations: [
     MainComponent,
     HeaderComponent,
     HomeComponent,
-    NearEarthObjComponent
+    PodComponent,
+    NearEarthObjComponent,
   ],
 
   // look into DatePipe
