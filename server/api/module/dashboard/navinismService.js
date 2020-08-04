@@ -18,7 +18,7 @@ let picOfTheDayObject = {
  * @description
  * */
 const picOfTheDaySvc = async (req, res)=> {
-    // TODO: NEED TO DOUBLE CHECK DATE CONFLICTS; just monitor...
+
     let header = req.headers;
     try {
         let dataObj;
@@ -39,6 +39,7 @@ const picOfTheDaySvc = async (req, res)=> {
 
         } else {
 
+            await navinismDal.getPictureForTheDay(dataObj[0].hdurl);
             picOfTheDayObject.copyright = dataObj[0].copyright;
             picOfTheDayObject.date = dataObj[0].date_issue;
             picOfTheDayObject.desc = dataObj[0].description;

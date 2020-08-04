@@ -12,7 +12,7 @@ export class NearEarthObjComponent extends BaseContextService implements OnInit 
   displayColumns: any =[];
   dataSource = new MatTableDataSource<any>([]);
   tableConfig;
-  isLoading =false;
+  isLoading =true;
   viewDateTitle;
 
   constructor() {

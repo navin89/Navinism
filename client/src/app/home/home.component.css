@@ -135,12 +135,10 @@ div.row {
   height: fit-content;
 }
 
-div.ar-wrapper {
-  padding: 10px !important;
+div.main-dashboard-wrapper {
+  padding: 8px !important;
   margin: 0px auto !important;
 }
-
-
 
 
 /* OTHER SCREENS */

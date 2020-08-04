@@ -123,6 +123,7 @@ const findPodExistenceDAL = (todayDate) => {
             let findPodExistenceQuery = `SELECT * FROM apod 
                                             WHERE date_issue= '${util.escapeSingleQuote(todayDate)}'`;
             let outputDb  = await dbService.query(findPodExistenceQuery);
+            console.log(`OUTPUT FROM DB: `, outputDb);
             resolve(outputDb);
 
         } catch (error) {

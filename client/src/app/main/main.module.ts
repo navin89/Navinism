@@ -17,12 +17,12 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatIconModule} from "@angular/material/icon";
-import { NearEarthObjComponent } from './near-earth-obj/near-earth-obj.component';
 import {MatTableModule} from "@angular/material/table";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {PodComponent} from "../home/pod/pod.component";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {NearEarthObjComponent} from "../home/near-earth-obj/near-earth-obj.component";
 
 @NgModule({
   imports: [

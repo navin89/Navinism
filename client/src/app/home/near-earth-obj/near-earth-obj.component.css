@@ -1,0 +1,168 @@
+.sub-main-title-container {
+  margin: 8px;
+  display: block;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
+.sub-main-title {
+  display: flex;
+}
+
+.mat-card-avatar {
+  background-image: url('src/assets/smallTele.gif');
+  background-size: 50px;
+  border-radius: 20%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+
+mat-card-subtitle {
+  font-size: 10px;
+  margin-bottom: 1px;
+}
+
+.pb-wrapper {
+  height: 8px;
+}
+
+mat-progress-bar {
+  margin-bottom: 10px;
+  transform: scaleY(0.5) rotate(180deg);
+}
+
+mat-card-actions {
+  font-size: 12px;
+  text-align: right;
+  margin: 2px;
+}
+
+mat-card-actions mat-slide-toggle {
+  transform: scale(0.75);
+}
+
+tr.mat-header-row {
+  height: auto !important;
+}
+
+img.hc-loading-bee {
+  width: 200px;
+  margin-top: -60px;
+}
+
+/*@media (min-width: 576px) {*/
+/*  .col-sm-6 {*/
+/*    flex: 0 0 50%;*/
+/*    max-width: 50%;*/
+/*    margin-bottom: 10px;*/
+/*  }*/
+/*}*/
+
+@media only screen and (max-height: 400px) {
+  div.modal-progress div.gif-wrapper {
+    display: none;
+  }
+}
+
+div.modal-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  padding: calc(50vh - 50px) 0px;
+}
+
+div.modal-progress div.bg-cover {
+  background: whitesmoke;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.modal-progress div.gif-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0px auto 30px auto;
+}
+
+div.modal-progress div.gif-wrapper img {
+  width: 168px;
+  height: 111px;
+  margin: 40px 20px
+}
+
+div.modal-progress div.error {
+  height: 26px;
+  font-family: "Lucida Grande";
+  font-size: 20px;
+  color: #e71d32;
+  font-weight: 500;
+  text-decoration: none solid #e71d32;
+  text-align: center;
+}
+
+div.modal-progress img.rotate {
+  transform: rotate(180deg);
+  margin: 50px 15px !important;
+  cursor: pointer;
+}
+
+div.modal-progress div.loading-desc {
+  width: 500px;
+  height: 50px;
+  background-size: cover;
+  font-family: "Lucida Grande";
+  font-size: 16px;
+  color: #4a4a4a;
+  text-decoration: none solid rgb(74, 74, 74);
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+
+/* TABLE AREA STYLES */
+.table-wrapper {
+  width: 100%;
+  font-size: 14px;
+  overflow-y: auto;
+  overflow-x: auto;
+  table-layout: fixed;
+  padding: 0px 10px;
+  height: calc(100vh - 250px);
+}
+
+.table-wrapper table {
+  width: 100%;
+}
+
+.fixed200 {
+  width: 100px;
+  min-width: 100px;
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background: #2e63c7;
+  color: #fafafa;
+}
+
+.row-data-element {
+  width: 100px;
+  min-width: 100px;
+  font-family: IBM Plex Sans;
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+}

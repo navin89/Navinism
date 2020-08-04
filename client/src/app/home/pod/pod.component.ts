@@ -14,6 +14,7 @@ export class PodComponent extends BaseContextService implements OnInit {
   refreshSub;
   isLoading =true;
   isDashboardReady =false;
+  isDashboardReadyForAvatar =false;
   podTitle;
   podImg;
   podDate;
@@ -28,6 +29,9 @@ export class PodComponent extends BaseContextService implements OnInit {
   ngOnInit(): void {
     setTimeout(()=> {
       // console.log(`Navinism Dashboard Component loaded`);
+      setTimeout(()=> {
+        this.isDashboardReadyForAvatar = true;
+      }, 1000);
       this.isLoading = false;
       this.isDashboardReady = true;
       this.loadData();

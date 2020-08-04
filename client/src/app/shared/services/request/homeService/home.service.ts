@@ -41,7 +41,7 @@ export class HomeService extends BaseContextService {
       this.http.get(backendUri + '/api/getPicOfTheDay')
         .subscribe(
           (data: any) => {
-            console.log(`WHAT DATA: `, data);
+            // console.log(`WHAT DATA: `, data);
           },
           error => {
             console.log(`ERROR[getPodPicture()]: `, error);

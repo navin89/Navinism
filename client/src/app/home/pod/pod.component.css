@@ -1,7 +1,38 @@
-.application-icon {
-  background-image: url('src/assets/telescopeAnimation.gif');
-  background-size: 75px;
-  background-repeat: no-repeat;
+
+.sub-main-title-container {
+  margin: 8px;
+  display: block;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.sub-main-header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.mat-card-avatar {
+  display: block;
+  background-image: url('src/assets/smallTele.gif');
+  background-size: 50px;
+  border-radius: 20%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.podTitle {
+  /*display: block;*/
+  /*font-size: 14px;*/
+  /*font-weight: bolder;*/
+}
+
+.podDate {
+  display: block;
+  font-size: 14px;
+  font-weight: bolder;
 }
 
 .imageOfTheDay {
@@ -9,10 +40,6 @@
   max-width: 100%;
 }
 
-.podDate {
-  font-size: 14px;
-  font-weight: bolder;
-}
 
 .podDesc {
   margin: 2px;
@@ -61,6 +88,14 @@ img.hc-loading-bee {
   width: 200px;
   margin-top: -60px;
 }
+
+/*@media (min-width: 576px) {*/
+/*  .col-sm-6 {*/
+/*    flex: 0 0 50%;*/
+/*    max-width: 50%;*/
+/*    margin-bottom: 10px;*/
+/*  }*/
+/*}*/
 
 @media only screen and (max-height: 400px) {
   div.modal-progress div.gif-wrapper {

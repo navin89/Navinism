@@ -1,13 +1,31 @@
-<mat-card class="main-card">
-  <mat-card-header>
-    <div mat-card-avatar class="application-icon"></div>
-    <mat-card-title class="podTitle">
-      {{podTitle}}
+<mat-card >
+  <div class="sub-main-title-container">
+    <mat-card-title class="sub-main-title">
+      PICTURE OF THE DAY
     </mat-card-title>
-    <mat-card-subtitle class="podDate">
-      {{podDate}}
-    </mat-card-subtitle>
-  </mat-card-header>
+  </div>
+
+  <div>
+    <mat-card-header>
+      <div class="sub-main-header-container">
+        <div [hidden]="!isDashboardReadyForAvatar">
+          <mat-icon mat-card-avatar class="application-icon"></mat-icon>
+        </div>
+        <div class="podTitle">
+          <mat-card-title>
+            {{podTitle}}
+          </mat-card-title>
+        </div>
+        <div>
+          <mat-card-subtitle class="podDate">
+            {{podDate}}
+          </mat-card-subtitle>
+        </div>
+      </div>
+
+    </mat-card-header>
+  </div>
+
   <mat-card-content>
     <div class="pb-wrapper">
       <mat-progress-bar mode="indeterminate" [hidden]="!isLoading"></mat-progress-bar>
@@ -31,10 +49,3 @@
   </mat-card-footer>
 </mat-card>
 
-<!--<div class="modal-progress" [hidden]="!isLoading">-->
-<!--  <div class="bg-cover"></div>-->
-<!--  <div class="gif-wrapper">-->
-<!--    <img src="/assets/telescopeAnimation.gif" />-->
-<!--  </div>-->
-<!--  <div class="loading-desc">Please wait while we load our Cosmos...</div>-->
-<!--</div>-->

@@ -2,74 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb505cf6-4c56-4acb-872b-182a1fb1f11f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/telescopeAnimation.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/arrow_left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/arrow_right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/assets/telescopeAnimation.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/main.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/polyfills-es5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/polyfills-es5.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/polyfills.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/polyfills.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/runtime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/runtime.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/scripts.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/styles.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/telescopeAnimation.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dist/client/vendor.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/smallTele.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/__ngcc_entry_points__.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/node_modules/__ngcc_entry_points__.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/node_modules/moment/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/node_modules/moment/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/home.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/main/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/main/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/pod/pod.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/main/main-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/main-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/main/main.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/main.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/main/near-earth-obj/near-earth-obj.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/near-earth-obj/near-earth-obj.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/main/near-earth-obj/near-earth-obj.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/near-earth-obj/near-earth-obj.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/main/near-earth-obj/near-earth-obj.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/near-earth-obj/near-earth-obj.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/main/near-earth-obj/near-earth-obj.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/near-earth-obj/near-earth-obj.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/main/near-earth-obj/near-earth-obj.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/near-earth-obj/near-earth-obj.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/main/near-earth-obj/near-earth-obj.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/home/near-earth-obj/near-earth-obj.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/shared/services/request/homeService/home.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/services/request/homeService/home.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/picOfTheDay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/versioning.build.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/versioning.build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/module/assets/picOfTheDay.png" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/module/assets/picOfTheDay.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/module/dashboard/navinism.dal.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/module/dashboard/navinism.dal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/module/dashboard/navinismService.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/module/dashboard/navinismService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/01.f9d01435976a8cfb9daa.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/02.53687cbe6512fb70292f.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/03.bc6306f4b8105410a282.png" beforeDir="false" />
@@ -82,6 +35,28 @@
       <change beforePath="$PROJECT_DIR$/server/dist/client/3rdpartylicenses.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/arrow_left.db6e2d88c7c35a775ce4.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/arrow_right.f7c6ac6d310d3b82f0a0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/bee.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/edit_attributes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-addlist.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-archive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-download.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-export.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-filter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-print.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-report-problem.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-sync.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/icon-upload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/infinity_loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/print.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/profile-alt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/public.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/spaceRocket_takeOff.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/assets/telescopeAnimation.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/fa-brands-400.140e875e1e58453221ad.eot" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/fa-brands-400.64295e33efa263357733.woff" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/fa-brands-400.65ed7d005846ac8f8096.svg" beforeDir="false" />
@@ -97,13 +72,15 @@
       <change beforePath="$PROJECT_DIR$/server/dist/client/fa-solid-900.792bbe12870f9e1707aa.woff2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/fa-solid-900.e01ea526204590d06558.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/fa-solid-900.f89ad185d4d491dd5ffe.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/dist/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/dist/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/dist/client/main.5d9b290bbfc519915ce1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/main.3ee7734637eb70d05106.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/polyfills-es5.9518466c744d78faa9b5.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/polyfills.708dfdb952d0ae9a1ac5.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/runtime.7d7e9038a1cdbceb3d53.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/scripts.38f4663a91ede48fca74.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/dist/client/styles.430aaab41c37e288c36d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dist/client/telescopeAnimation.a28f52e2af86a765dc0a.gif" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,17 +135,17 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/client/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/app/home" />
+      <recent name="$PROJECT_DIR$/client/src/assets" />
+      <recent name="$PROJECT_DIR$/client/src" />
+      <recent name="$PROJECT_DIR$/client/src/app/shared/services/request/neoService" />
+      <recent name="$PROJECT_DIR$/client/src/app/shared/services/request/homeService" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/api/module/dashboard" />
       <recent name="$PROJECT_DIR$/client" />
       <recent name="$PROJECT_DIR$/client/src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/assets" />
-      <recent name="$PROJECT_DIR$/client/src/app/home" />
-      <recent name="$PROJECT_DIR$/client/src" />
-      <recent name="$PROJECT_DIR$/client/src/app/shared/services/request/neoService" />
-      <recent name="$PROJECT_DIR$/client/src/app/shared/services/request/homeService" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build-prod-no-patch">
@@ -273,7 +250,8 @@
       <workItem from="1596352618225" duration="26139000" />
       <workItem from="1596453942816" duration="8713000" />
       <workItem from="1596476735502" duration="161000" />
-      <workItem from="1596476985676" duration="2479000" />
+      <workItem from="1596476985676" duration="3064000" />
+      <workItem from="1596540770798" duration="14361000" />
     </task>
     <servers />
   </component>
@@ -302,42 +280,42 @@
     </state>
     <state x="408" y="205" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1594470390812" />
     <state x="476" y="236" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1596350250234" />
-    <state width="1398" height="211" key="GridCell.Tab.0.bottom" timestamp="1596477614198">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1638" height="318" key="GridCell.Tab.0.bottom" timestamp="1596561191834">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1878" height="378" key="GridCell.Tab.0.bottom/0.0.1440.900/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1596474539700" />
-    <state width="1398" height="211" key="GridCell.Tab.0.bottom/0.0.1440.900/-206.-1080.1920.1080@0.0.1440.900" timestamp="1596477614198" />
-    <state width="1878" height="254" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1596462030049" />
+    <state width="1398" height="378" key="GridCell.Tab.0.bottom/0.0.1440.900/-206.-1080.1920.1080@0.0.1440.900" timestamp="1596480211612" />
+    <state width="1638" height="318" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1596561191834" />
     <state width="1642" height="414" key="GridCell.Tab.0.bottom/0.23.1440.877/-206.-1057.1920.1057@-206.-1057.1920.1057" timestamp="1593970596328" />
     <state width="1398" height="184" key="GridCell.Tab.0.bottom/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1595623328829" />
     <state width="1878" height="505" key="GridCell.Tab.0.bottom/0.23.1440.877/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593879367070" />
     <state width="1398" height="386" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1596355888721" />
-    <state width="1398" height="211" key="GridCell.Tab.0.center" timestamp="1596477614197">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1638" height="318" key="GridCell.Tab.0.center" timestamp="1596561191833">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1878" height="378" key="GridCell.Tab.0.center/0.0.1440.900/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1596474539699" />
-    <state width="1398" height="211" key="GridCell.Tab.0.center/0.0.1440.900/-206.-1080.1920.1080@0.0.1440.900" timestamp="1596477614197" />
-    <state width="1878" height="254" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1596462030048" />
+    <state width="1398" height="378" key="GridCell.Tab.0.center/0.0.1440.900/-206.-1080.1920.1080@0.0.1440.900" timestamp="1596480211611" />
+    <state width="1638" height="318" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1596561191833" />
     <state width="1642" height="414" key="GridCell.Tab.0.center/0.23.1440.877/-206.-1057.1920.1057@-206.-1057.1920.1057" timestamp="1593970596327" />
     <state width="1398" height="184" key="GridCell.Tab.0.center/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1595623328828" />
     <state width="1878" height="505" key="GridCell.Tab.0.center/0.23.1440.877/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593879367068" />
     <state width="1398" height="386" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1596355888720" />
-    <state width="1398" height="211" key="GridCell.Tab.0.left" timestamp="1596477614196">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1638" height="318" key="GridCell.Tab.0.left" timestamp="1596561191832">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1878" height="378" key="GridCell.Tab.0.left/0.0.1440.900/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1596474539698" />
-    <state width="1398" height="211" key="GridCell.Tab.0.left/0.0.1440.900/-206.-1080.1920.1080@0.0.1440.900" timestamp="1596477614196" />
-    <state width="1878" height="254" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1596462030048" />
+    <state width="1398" height="378" key="GridCell.Tab.0.left/0.0.1440.900/-206.-1080.1920.1080@0.0.1440.900" timestamp="1596480211610" />
+    <state width="1638" height="318" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1596561191832" />
     <state width="1642" height="414" key="GridCell.Tab.0.left/0.23.1440.877/-206.-1057.1920.1057@-206.-1057.1920.1057" timestamp="1593970596327" />
     <state width="1398" height="184" key="GridCell.Tab.0.left/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1595623328827" />
     <state width="1878" height="505" key="GridCell.Tab.0.left/0.23.1440.877/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593879367067" />
     <state width="1398" height="386" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1596355888719" />
-    <state width="1398" height="211" key="GridCell.Tab.0.right" timestamp="1596477614197">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1638" height="318" key="GridCell.Tab.0.right" timestamp="1596561191834">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1878" height="378" key="GridCell.Tab.0.right/0.0.1440.900/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1596474539699" />
-    <state width="1398" height="211" key="GridCell.Tab.0.right/0.0.1440.900/-206.-1080.1920.1080@0.0.1440.900" timestamp="1596477614197" />
-    <state width="1878" height="254" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1596462030049" />
+    <state width="1398" height="378" key="GridCell.Tab.0.right/0.0.1440.900/-206.-1080.1920.1080@0.0.1440.900" timestamp="1596480211611" />
+    <state width="1638" height="318" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1596561191834" />
     <state width="1642" height="414" key="GridCell.Tab.0.right/0.23.1440.877/-206.-1057.1920.1057@-206.-1057.1920.1057" timestamp="1593970596327" />
     <state width="1398" height="184" key="GridCell.Tab.0.right/0.23.1440.877/-206.-1057.1920.1057@0.23.1440.877" timestamp="1595623328829" />
     <state width="1878" height="505" key="GridCell.Tab.0.right/0.23.1440.877/-206.-1080.1920.1080@-206.-1080.1920.1080" timestamp="1593879367068" />
