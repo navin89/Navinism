@@ -11,7 +11,8 @@ let picOfTheDayObject = {
     copyright: null,
     date: null,
     desc: null,
-    title: null
+    title: null,
+    isPicAvail: null
 }
 
 /**
@@ -31,15 +32,18 @@ const picOfTheDaySvc = async (req, res)=> {
             const podCallResult = await navinismDal.picOfTheDayCall(header);
             await navinismDal.insertPodDAL(podCallResult);
             dataObj = await findPodExistence(now);
-            await navinismDal.getPictureForTheDay(dataObj[0].hdurl);
+
+            JSON.parse(dataObj[0].hdurl).dataUrl.length !== 0 ?
+                await navinismDal.getPictureForTheDay(JSON.parse(dataObj[0].hdurl).dataUrl[0]) : picOfTheDayObject.isPicAvail = false;
             picOfTheDayObject.copyright = dataObj[0].copyright;
             picOfTheDayObject.date = dataObj[0].date_issue;
             picOfTheDayObject.desc = dataObj[0].description;
             picOfTheDayObject.title = dataObj[0].title;
 
-        } else {
 
-            await navinismDal.getPictureForTheDay(dataObj[0].hdurl);
+        } else {
+            JSON.parse(dataObj[0].hdurl).dataUrl.length !== 0 ?
+                await navinismDal.getPictureForTheDay(JSON.parse(dataObj[0].hdurl).dataUrl[0]) : picOfTheDayObject.isPicAvail = false;
             picOfTheDayObject.copyright = dataObj[0].copyright;
             picOfTheDayObject.date = dataObj[0].date_issue;
             picOfTheDayObject.desc = dataObj[0].description;

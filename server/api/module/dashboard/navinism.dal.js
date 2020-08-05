@@ -10,31 +10,6 @@ const nasaUrl = process.env.nasa_api_url+process.env.nasa_api_key;
 const dbService = require('../../database/db-service');
 const util = require('../../util/util');
 
-
-// TODO: REDIS MIGHT BE TAKEN OUT IN THE NEAR FUTURE!
-
-/* REDIS */
-const redis = require('redis');
-const redisClient = redis.createClient({
-    host: process.env.VM_IP,
-    port: process.env.REDIS_PORT
-}); // REDIS CLIENT
-
-redisClient.auth(process.env.REDIS_PW, (err, reply)=> {
-    if(err !== null)
-        console.log(`Authentication to Redis through pw has failed!!; [Check Password]`);
-    else
-        console.log(`Authentication to Redis through pw is: `, reply);
-});
-
-redisClient.on('ready', ()=> {
-    console.log("Redis is ready to be redissssSSsssed!");
-});
-
-redisClient.on('error',()=> {
-    console.log("error in Redis");
-});
-
 // ------------------------------------------------------------
 
 /** 3rd Party API CALLS */
@@ -123,7 +98,6 @@ const findPodExistenceDAL = (todayDate) => {
             let findPodExistenceQuery = `SELECT * FROM apod 
                                             WHERE date_issue= '${util.escapeSingleQuote(todayDate)}'`;
             let outputDb  = await dbService.query(findPodExistenceQuery);
-            console.log(`OUTPUT FROM DB: `, outputDb);
             resolve(outputDb);
 
         } catch (error) {
@@ -144,15 +118,18 @@ const insertPodDAL = (podObject) => {
 
     return new Promise(async(resolve, reject) => {
         try {
+            let tempObj = {}
             let parsedObj = JSON.parse(podObject);
+            tempObj.dataUrl = parsedObj.hdurl === undefined ? [] : [parsedObj.hdurl];
             let findPodExistenceQuery = `INSERT INTO apod (DATE_ISSUE, TITLE, COPYRIGHT, DESCRIPTION, HDURL)
             VALUES('${util.escapeSingleQuote(parsedObj.date)}', '${util.escapeSingleQuote(parsedObj.title)}', 
             '${util.escapeSingleQuote(parsedObj.copyright)}', '${util.escapeSingleQuote(parsedObj.explanation)}',
-            '${util.escapeSingleQuote(parsedObj.hdurl)}' )`;
+            '${util.escapeSingleQuote(JSON.stringify(tempObj))}' )`;
             await dbService.query(findPodExistenceQuery);
             resolve(true);
 
         } catch (error) {
+
             console.log(`ERROR: insertPodDAL(): `, error); // log error
             reject(false);
         }
