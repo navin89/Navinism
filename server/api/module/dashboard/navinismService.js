@@ -7,6 +7,11 @@ const momentTZ = require('moment-timezone');
 const moment = require('moment');
 moment().format();
 
+
+/**
+ * @description
+ *
+ * */
 let picOfTheDayObject = {
     copyright: null,
     date: null,
@@ -17,6 +22,8 @@ let picOfTheDayObject = {
 
 /**
  * @description
+ *
+ *
  * */
 const picOfTheDaySvc = async (req, res)=> {
 
@@ -60,6 +67,12 @@ const picOfTheDaySvc = async (req, res)=> {
 
 };
 
+
+/**
+ * @description
+ *
+ *
+ * */
 const getPicOfTheDay = async (req, res, next)=> {
 
     const directory = 'api/module/assets/';
@@ -92,21 +105,40 @@ const getPicOfTheDay = async (req, res, next)=> {
 
 };
 
-/** DB CALLS */
+/**
+ * @description
+ *
+ * Finds for the picture of the day record
+ * whether it exists currently on database
+ * */
 const findPodExistence = async (todaysDate) => {
-
     try {
         return await navinismDal.findPodExistenceDAL(todaysDate);
     } catch (error) {
         console.log(`ERROR findPodExistence(): ${error}`);
         return error;
     }
+}
 
+
+/**
+ * @description
+ * TESTING PURPOSES
+ * */
+const dockerineSvc = async (req, res, err) => {
+    try {
+        let tempObj = {message: "Dockerine service route is working!"};
+        res.send(util.assembleResponse(200, tempObj));
+    } catch (error) {
+        console.log(`ERROR dockerineSvc(): ${error}`);
+        return error;
+    }
 }
 
 
 module.exports = {
-      picOfTheDaySvc,
-      getPicOfTheDay,
-      findPodExistence
+  dockerineSvc,
+  picOfTheDaySvc,
+  getPicOfTheDay,
+  findPodExistence
 };

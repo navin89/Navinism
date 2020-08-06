@@ -7,6 +7,7 @@ module.exports = function (express, app, passport) {
 
     const navinismServices = require('../module/dashboard/index');
 
+    app.route('/api/dockerine').get(navinismServices.dockerineSvc);
     app.route('/api/picOfTheDaySvc').get(navinismServices.picOfTheDaySvc);
     app.route('/api/getPicOfTheDay').get(navinismServices.getPicOfTheDay);
 

@@ -1,0 +1,29 @@
+version: '2.0'
+services:
+  navinism-app1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "8081:3010"
+
+  navinism-app2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "8082:3010"
+
+  load-balancer-nginx:
+    build:
+      context: .
+      dockerfile: nginx-docker/Dockerfile
+    depends_on:
+      - navinism-app1
+      - navinism-app2
+    ports:
+    - "8080:80"
+
+
+
+
