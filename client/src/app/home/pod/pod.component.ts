@@ -47,7 +47,7 @@ export class PodComponent extends BaseContextService implements OnInit {
       this.podDate = moment(parsedResp.date).format("MM-DD-YYYY");
       this.podCopyRight = parsedResp.copyright;
       this.podDescription = parsedResp.desc;
-      this.podImg = parsedResp.isPicAvail === false ? "assets/alaska.jpg" : "http://localhost:3010/api/getPicOfTheDay";
+      this.podImg = parsedResp.isPicAvail === false ? "assets/alaska.jpg" : "http://navinism.org/api/getPicOfTheDay";
 
     }, error=> {
       // console.log(`at the front err= `, error);
