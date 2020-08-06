@@ -42,8 +42,11 @@ const picOfTheDaySvc = async (req, res)=> {
 
 
         } else {
+
             JSON.parse(dataObj[0].hdurl).dataUrl.length !== 0 ?
                 await navinismDal.getPictureForTheDay(JSON.parse(dataObj[0].hdurl).dataUrl[0]) : picOfTheDayObject.isPicAvail = false;
+
+
             picOfTheDayObject.copyright = dataObj[0].copyright;
             picOfTheDayObject.date = dataObj[0].date_issue;
             picOfTheDayObject.desc = dataObj[0].description;
