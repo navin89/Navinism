@@ -120,7 +120,7 @@ const insertPodDAL = (podObject) => {
         try {
             let tempObj = {}
             let parsedObj = JSON.parse(podObject);
-            tempObj.dataUrl = parsedObj.hdurl === undefined ? [] : [parsedObj.url];
+            tempObj.dataUrl = parsedObj.hdurl === undefined ? [] : [parsedObj.hdurl];
             let findPodExistenceQuery = `INSERT INTO apod (DATE_ISSUE, TITLE, COPYRIGHT, DESCRIPTION, HDURL)
             VALUES('${util.escapeSingleQuote(parsedObj.date)}', '${util.escapeSingleQuote(parsedObj.title)}', 
             '${util.escapeSingleQuote(parsedObj.copyright)}', '${util.escapeSingleQuote(parsedObj.explanation)}',

@@ -1,23 +1,22 @@
 var parse = require('pg-connection-string').parse;
-var config = parse('postgres://navin89:defaultSystem@89@157.245.197.124:9889/navinism');
-const connectionString = 'postgresql://navin89:defaultSystem@89@157.245.197.124:9889/navinism'
+const connectionString = process.env.DB_CONN;
 const { Pool, Client } = require('pg');
 
-const pool = new Pool({
-    connectionString: connectionString,
-});
-
-pool.query('SELECT NOW()', (err, res) => {
-    if(err) {
-
-        console.log(`ERROR: `, err);
-        pool.end()
-
-    } else {
-        // console.log(`SUCCESS DB: `, res);
-        pool.end()
-    }
-});
+// const pool = new Pool({
+//     connectionString: connectionString,
+// });
+//
+// pool.query('SELECT NOW()', (err, res) => {
+//     if(err) {
+//
+//         console.log(`ERROR: `, err);
+//         pool.end()
+//
+//     } else {
+//         // console.log(`SUCCESS DB: `, res);
+//         pool.end()
+//     }
+// });
 
 const query = (sqlQuery) => {
 
