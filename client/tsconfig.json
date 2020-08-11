@@ -1,5 +1,4 @@
 {
-  "files": ["src/tests/main.ts",  "src/tests/greet.ts"],
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
