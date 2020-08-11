@@ -6,6 +6,7 @@ const path = require('path');
 const momentTZ = require('moment-timezone');
 const moment = require('moment');
 moment().format();
+let converter = require("../../util/util");
 
 
 /**
@@ -134,10 +135,28 @@ const dockerineSvc = async (req, res, err) => {
     }
 }
 
+const getRgbToHex = async (req, res, err) => {
+    var red   = parseInt(req.query.red, 10);
+    var green = parseInt(req.query.green, 10);
+    var blue  = parseInt(req.query.blue, 10);
+    var hex = converter.rgbToHex(red, green, blue);
+    res.send(hex);
+}
+
+
+const getHexToRgb = async (req, res, err) => {
+    var hex = req.query.hex;
+    var rgb = converter.hexToRgb(hex);
+    res.send(JSON.stringify(rgb));
+}
+
+
 
 module.exports = {
-  dockerineSvc,
-  picOfTheDaySvc,
-  getPicOfTheDay,
-  findPodExistence
+      dockerineSvc,
+      picOfTheDaySvc,
+      getPicOfTheDay,
+      findPodExistence,
+      getHexToRgb,
+      getRgbToHex
 };

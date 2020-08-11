@@ -4,12 +4,15 @@ module.exports = function (express, app, passport) {
 
     const path = require('path');
     const _app_folder = '../../../dist/client';
-
     const navinismServices = require('../module/dashboard/index');
 
-    app.route('/api/dockerine').get(navinismServices.dockerineSvc);
     app.route('/api/picOfTheDaySvc').get(navinismServices.picOfTheDaySvc);
     app.route('/api/getPicOfTheDay').get(navinismServices.getPicOfTheDay);
+
+    // FOR API CALL TESTING...
+    app.route('/api/dockerine').get(navinismServices.dockerineSvc);
+    app.route('/api/hexToRgb').get(navinismServices.getHexToRgb);
+    app.route('/api/rgbToHex').get(navinismServices.getRgbToHex);
 
     if (process.env.DEPLOY === 'NGINX') {
         app.use(express.static('/home/navin89/app/dist/client', { maxAge: '2y' }));
