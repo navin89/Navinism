@@ -16,4 +16,4 @@ jobs:
           command: cd server && npm install
       - run:
           name: test application
-          command: cd server && npm test
+          command: cd server && npm start && npm test
