@@ -9,11 +9,11 @@ jobs:
           name: Echo out something!
           command: echo "hello navin from a docker image!"
       - run:
-          name: Change dir to server
-          command: cd server
+          name: Check contents of directory
+          command: ls -la
       - run:
           name: Install NPM
-          command: npm install
+          command: cd server && npm install
       - run:
           name: test application
-          command: npm test
+          command: cd server && npm test
