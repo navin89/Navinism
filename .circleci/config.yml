@@ -16,6 +16,7 @@ jobs:
       - run:
           name: run server
           command: cd server && npm start
+          background: true
       - run:
           name: test application
           command: cd server && npm test
