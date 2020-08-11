@@ -1,7 +1,7 @@
 jobs:
   install-navinism-backend:
-#     docker:
-#       - image: circleci/node:12.13.1-stretch
+    docker:
+      - image: circleci/node:12.13.1-stretch
     steps:
       - checkout
       - run:
@@ -17,7 +17,7 @@ jobs:
           name: test application
           command: cd server && npm start && npm test
 orbs:
-  node: circleci/node:12.13.1-stretch
+  node: circleci/node@4.0.0
 version: 2.1
 workflows:
   test_navinism_backend:
