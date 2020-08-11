@@ -14,8 +14,11 @@ jobs:
           name: Install NPM
           command: cd server && npm install
       - run:
+          name: run server
+          command: cd server && npm start
+      - run:
           name: test application
-          command: cd server && npm start && npm test
+          command: cd server && npm test
 orbs:
   node: circleci/node@4.0.0
 version: 2.1
