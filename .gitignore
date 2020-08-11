@@ -17,6 +17,8 @@
 .history/*
 
 # System Files
+client/.editorconfig
+client/.DS_Store
 .DS_Store
 Thumbs.db
 
