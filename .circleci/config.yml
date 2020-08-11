@@ -11,3 +11,9 @@ jobs:
       - run:
           name: Check current version of node
           command: node -v
+      - run:
+          name: Install NPM
+          command: npm install
+       - run:
+          name: test application
+          command: npm test
