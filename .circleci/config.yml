@@ -10,10 +10,10 @@ jobs:
           command: echo "hello navin from a docker image!"
       - run:
           name: Check current version of node
-          command: node -v
-      - run:
-          name: Install NPM
-          command: npm install
-      - run:
-          name: test application
-          command: npm test
+          command: ls -la
+#       - run:
+#           name: Install NPM
+#           command: npm install
+#       - run:
+#           name: test application
+#           command: npm test
