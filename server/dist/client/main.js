@@ -694,7 +694,7 @@ var PodComponent = /** @class */ (function (_super) {
             _this.podDate = moment(parsedResp.date).format("MM-DD-YYYY");
             _this.podCopyRight = parsedResp.copyright;
             _this.podDescription = parsedResp.desc;
-            _this.podImg = parsedResp.isPicAvail === false ? "assets/alaska.jpg" : "http://navinism.org/api/getPicOfTheDay";
+            _this.podImg = parsedResp.isPicAvail === false ? "assets/picOfTheDay.jpg" : "http://navinism.org/api/getPicOfTheDay";
         }, function (error) {
             // console.log(`at the front err= `, error);
             _this.podTitle = "NO PICTURE";
