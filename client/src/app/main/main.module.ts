@@ -22,7 +22,6 @@ import {PodComponent} from "./home/pod/pod.component";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {NearEarthObjComponent} from "./home/near-earth-obj/near-earth-obj.component";
-import {NavbarComponent} from "../navbar/navbar.component";
 import{ ServiceWorkerModule } from '@angular/service-worker';
 import {environment} from "../../environments/environment.prod";
 
@@ -51,7 +50,6 @@ import {environment} from "../../environments/environment.prod";
   ],
   declarations: [
     MainComponent,
-    NavbarComponent,
     HeaderComponent,
     HomeComponent,
     PodComponent,
