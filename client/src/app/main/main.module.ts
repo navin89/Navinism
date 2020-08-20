@@ -1,4 +1,4 @@
-import {NgModule} from "@angular/core";
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {CommonModule, DatePipe} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
@@ -9,7 +9,7 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MainComponent} from "./main.component";
 import {HeaderComponent} from "./header/header.component";
-import {HomeComponent} from "../home/home.component";
+import {HomeComponent} from "./home/home.component";
 import {MainRoutingModule} from './main-routing.module';
 import {MatButtonModule} from "@angular/material/button";
 import {MDBBootstrapModule} from "angular-bootstrap-md";
@@ -18,15 +18,18 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTableModule} from "@angular/material/table";
-import { FlexLayoutModule } from '@angular/flex-layout';
-import {PodComponent} from "../home/pod/pod.component";
+import {PodComponent} from "./home/pod/pod.component";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
-import {NearEarthObjComponent} from "../home/near-earth-obj/near-earth-obj.component";
+import {NearEarthObjComponent} from "./home/near-earth-obj/near-earth-obj.component";
+import {NavbarComponent} from "../navbar/navbar.component";
+import{ ServiceWorkerModule } from '@angular/service-worker';
+import {environment} from "../../environments/environment.prod";
 
 @NgModule({
   imports: [
-    MDBBootstrapModule.forRoot(),// watch out for this
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    MDBBootstrapModule.forRoot(),
     MatDialogModule,
     DragDropModule,
     CdkTableModule,
@@ -43,12 +46,12 @@ import {NearEarthObjComponent} from "../home/near-earth-obj/near-earth-obj.compo
     MatTooltipModule,
     MatIconModule,
     MatTableModule,
-    FlexLayoutModule,
     MatProgressBarModule,
     MatSlideToggleModule
   ],
   declarations: [
     MainComponent,
+    NavbarComponent,
     HeaderComponent,
     HomeComponent,
     PodComponent,
@@ -58,7 +61,7 @@ import {NearEarthObjComponent} from "../home/near-earth-obj/near-earth-obj.compo
   // look into DatePipe
   providers: [DatePipe],
   entryComponents: [],
-  schemas: []
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MainModule {}
 

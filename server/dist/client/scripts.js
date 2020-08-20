@@ -12268,4 +12268,3 @@ module.exports = function(Chart) {
 },{"1":1}]},{},[7])(7)
 });
 ;
-//# sourceMappingURL=scripts.js.map

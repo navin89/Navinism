@@ -5,6 +5,22 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {MainModule} from './main/main.module';
 
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { CookieService } from 'ngx-cookie-service';
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {CachingInterceptor} from "./shared/common/caching.interceptor";
+import {RequestCache} from "./shared/services/request-cache.service";
+import {MatTableModule} from "@angular/material/table";
+import {FormsModule} from "@angular/forms";
+import {SharedModule} from "./shared/shared.module";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -12,11 +28,21 @@ import {MainModule} from './main/main.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MainModule
+    MainModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatTableModule,
+    MatListModule,
+    SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [RequestCache, { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true }, CookieService],
   bootstrap: [AppComponent]
 })
 

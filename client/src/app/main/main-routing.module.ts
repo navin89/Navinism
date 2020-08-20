@@ -1,8 +1,8 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import {MainComponent} from "./main.component";
-import {HomeComponent} from "../home/home.component";
-import {NearEarthObjComponent} from "../home/near-earth-obj/near-earth-obj.component";
+import {HomeComponent} from "./home/home.component";
+import {NearEarthObjComponent} from "./home/near-earth-obj/near-earth-obj.component";
 
 
 
