@@ -1,0 +1,61 @@
+<mat-card >
+  <mat-toolbar>
+    <div class="sub-main-title-container">
+      <mat-card-title class="sub-main-title">
+        PICTURE OF THE DAY
+      </mat-card-title>
+    </div>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div>
+    <mat-card-header>
+      <div class="sub-main-header-container">
+        <div [hidden]="!isDashboardReadyForAvatar">
+          <mat-icon mat-card-avatar class="application-icon"></mat-icon>
+        </div>
+        <div class="podTitle">
+          <mat-card-title>
+            {{podTitle}}
+          </mat-card-title>
+        </div>
+        <div>
+          <mat-card-subtitle class="podDate">
+            {{podDate}}
+          </mat-card-subtitle>
+        </div>
+      </div>
+
+    </mat-card-header>
+  </div>
+
+  <mat-card-content>
+    <div class="pb-wrapper">
+      <mat-progress-bar mode="indeterminate" [hidden]="!isLoading"></mat-progress-bar>
+    </div>
+
+    <div [hidden]="!isDashboardReady">
+      <img mat-card-image class="imageOfTheDay" src="{{podImg}}" alt="podImg"  />
+    </div>
+    <div class="podDesc" [hidden]="!isDashboardReady">
+      {{podDescription}}
+    </div>
+
+  </mat-card-content>
+  <mat-card-footer>
+    <div class="podCopyright" [hidden]="!isDashboardReady">
+      &#169; {{podCopyRight}}
+    </div>
+    <mat-card-actions>
+      <mat-slide-toggle [(ngModel)]="isAutoRefresh" (toggleChange)="autoRefresh()">Helpful</mat-slide-toggle>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>
+
+

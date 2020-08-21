@@ -4,14 +4,13 @@ import { BaseContextService } from './services/base-context.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import {PopoverModule} from "angular-bootstrap-md";
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [
-
-  ],
+  declarations: [SafePipe],
   exports: [
 
   ],

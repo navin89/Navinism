@@ -24,6 +24,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {NearEarthObjComponent} from "./home/near-earth-obj/near-earth-obj.component";
 import{ ServiceWorkerModule } from '@angular/service-worker';
 import {environment} from "../../environments/environment.prod";
+import {PodComponentDesktop} from "./home/pod/pod.component.desktop";
+import {PodComponentMobile} from "./home/pod/pod.component.mobile";
 
 @NgModule({
   imports: [
@@ -53,6 +55,8 @@ import {environment} from "../../environments/environment.prod";
     HeaderComponent,
     HomeComponent,
     PodComponent,
+    PodComponentDesktop,
+    PodComponentMobile,
     NearEarthObjComponent,
   ],
 
