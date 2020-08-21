@@ -89,6 +89,10 @@ img.hc-loading-bee {
   margin-top: -60px;
 }
 
+.example-spacer {
+  flex: 1 1 auto;
+}
+
 /*@media (min-width: 576px) {*/
 /*  .col-sm-6 {*/
 /*    flex: 0 0 50%;*/
