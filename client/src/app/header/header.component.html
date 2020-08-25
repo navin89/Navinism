@@ -1,0 +1,67 @@
+<div class="header-wrapper">
+  <mat-toolbar>
+    <div class="container-fluid">
+      <!-- hidden on both SM and XS screen sizes -->
+      <div fxShow="true" fxHide.lt-md="true" class="row">
+        <div class="col-sm-2 navbar-logo-border">
+          <span><img src="assets/spaceRocket_takeOff.jpg" height="35" width="40" /></span>
+        </div>
+        <span class="example-spacer"></span>
+
+        <div class="col-sm-8 navbar-title-border">
+          <div class="navbar-title">NAVINISM</div>
+        </div>
+
+        <div class="small-menu col-sm-2 " [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </div>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span class="menu-label">Home</span>
+          </button>
+          <button mat-menu-item routerLink="/neo">
+            <mat-icon>fingerprint</mat-icon>
+            <span class="menu-label">Near Earth Objects</span>
+          </button>
+        </mat-menu>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+          <div class="row justify-content-between">
+            <div class="col-xs-4 navbar-title-border">
+              <div class="navbar-title">NAVINISM</div>
+            </div>
+            <div class="side-menu col-xs-4 ">
+              <button mat-button (click)="sidenav.toggle()">Side Menu</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+  </mat-toolbar>
+</div>
+
+
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidenav fxLayout="column" class="sidenav">
+    <div fxLayout="column" >
+      <a (click)="sidenav.toggle()" mat-button>Close</a>
+      <button mat-menu-item routerLink="/home">
+        <mat-icon>home</mat-icon>
+        <span class="menu-label">Home</span>
+      </button>
+      <button mat-menu-item routerLink="/neo">
+        <mat-icon>fingerprint</mat-icon>
+        <span class="menu-label">Near Earth Objects</span>
+      </button>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

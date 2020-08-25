@@ -1,8 +1,8 @@
 {
-  "name": "client",
-  "short_name": "client",
+  "name": "Navinism",
+  "short_name": "Navinism",
   "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "background_color": "#FFFF00",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

@@ -1,0 +1,72 @@
+div.header-wrapper mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px !important;
+  min-height: 70px !important;
+  background-color: #ffffff!important;
+  color: #21298a!important;
+  z-index: 1000;
+}
+
+.sidenav {
+  margin-top: 70px;
+}
+
+
+
+.container-fluid {
+  /*border: 5px solid black;*/
+}
+
+div.navbar-logo-border {
+  position: relative;
+}
+
+div.small-menu {
+  line-height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+div.side-menu {
+  line-height: 42px;
+  position: relative;
+  cursor: pointer;
+}
+
+
+div.small-menu .mat-icon {
+  vertical-align: middle;
+}
+
+.navbar-title-border {
+  height: 45px;
+  position: relative;
+  padding: 4px;
+}
+
+.navbar-title {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  font-size: 28px;
+
+}
+
+mat-toolbar .mat-tab-nav-bar a.mat-tab-link span.menu-label {
+  display: none;
+}
+
+mat-toolbar .mat-tab-nav-bar a.mat-tab-link:hover span.menu-label,
+mat-toolbar .mat-tab-nav-bar a.mat-tab-link.selected span.menu-label {
+  display: block;
+}
+
+img {
+  margin-top: 5px;
+}
+
+
+

@@ -1,67 +1,83 @@
-<!--<mat-card >-->
-<!--  <mat-toolbar>-->
-<!--    <div class="sub-main-title-container">-->
-<!--      <mat-card-title class="sub-main-title">-->
-<!--        PICTURE OF THE DAY-->
-<!--      </mat-card-title>-->
-<!--    </div>-->
-<!--    <span class="example-spacer"></span>-->
-<!--    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">-->
-<!--      <mat-icon>favorite</mat-icon>-->
-<!--    </button>-->
-<!--    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">-->
-<!--      <mat-icon>share</mat-icon>-->
-<!--    </button>-->
-<!--  </mat-toolbar>-->
+<mat-card >
+  <mat-toolbar>
+    <div class="container-fluid">
+      <div fxShow="true" fxHide.lt-md="true" class="row">
+        <div class="col-xs-8 col-sm-8">
+          <mat-card-title>
+            PICTURE OF THE DAY
+          </mat-card-title>
+        </div>
+        <span class="example-spacer"></span>
+        <div class="col-xs-2 col-sm-2">
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+        <div class="col-xs-2 col-sm-2">
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+      </div>
 
-<!--  <div>-->
-<!--    <mat-card-header>-->
-<!--      <div class="sub-main-header-container">-->
-<!--        <div [hidden]="!isDashboardReadyForAvatar">-->
-<!--          <mat-icon mat-card-avatar class="application-icon"></mat-icon>-->
-<!--        </div>-->
-<!--        <div class="podTitle">-->
-<!--          <mat-card-title>-->
-<!--            {{podTitle}}-->
-<!--          </mat-card-title>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <mat-card-subtitle class="podDate">-->
-<!--            {{podDate}}-->
-<!--          </mat-card-subtitle>-->
-<!--        </div>-->
-<!--      </div>-->
+      <div fxShow="true" fxHide.gt-sm="true">
+        <div class="row justify-content-between">
+          <div class="col-xs-4 navbar-title-border">
+            <mat-card-title class="sub-main-title">
+              PICTURE OF THE DAY
+            </mat-card-title>
+          </div>
+          <div class="side-menu col-xs-4 ">
+            <mat-icon>equalizer</mat-icon>
+          </div>
+        </div>
+      </div>
 
-<!--    </mat-card-header>-->
-<!--  </div>-->
 
-<!--  <mat-card-content>-->
-<!--    <div class="pb-wrapper">-->
-<!--      <mat-progress-bar mode="indeterminate" [hidden]="!isLoading"></mat-progress-bar>-->
-<!--    </div>-->
+    </div>
 
-<!--    <div [hidden]="!isDashboardReady">-->
-<!--      <img mat-card-image class="imageOfTheDay" src="{{podImg}}" alt="podImg"  />-->
-<!--    </div>-->
-<!--    <div class="podDesc" [hidden]="!isDashboardReady">-->
-<!--      {{podDescription}}-->
-<!--    </div>-->
+  </mat-toolbar>
 
-<!--  </mat-card-content>-->
-<!--  <mat-card-footer>-->
-<!--    <div class="podCopyright" [hidden]="!isDashboardReady">-->
-<!--      &#169; {{podCopyRight}}-->
-<!--    </div>-->
-<!--    <mat-card-actions>-->
-<!--      <mat-slide-toggle [(ngModel)]="isAutoRefresh" (toggleChange)="autoRefresh()">Helpful</mat-slide-toggle>-->
-<!--    </mat-card-actions>-->
-<!--  </mat-card-footer>-->
-<!--</mat-card>-->
+  <div>
+    <mat-card-header>
+      <div class="sub-main-header-container">
+        <div [hidden]="!isDashboardReadyForAvatar">
+          <mat-icon mat-card-avatar class="application-icon"></mat-icon>
+        </div>
+        <div class="podTitle">
+          <mat-card-title>
+            {{podTitle}}
+          </mat-card-title>
+        </div>
+        <div>
+          <mat-card-subtitle class="podDate">
+            {{podDate}}
+          </mat-card-subtitle>
+        </div>
+      </div>
 
-<div class="desktop-container" *ngIf="!isMobileResolution; else mobileContainer">
-  <app-pod-desktop></app-pod-desktop>
-</div>
+    </mat-card-header>
+  </div>
 
-<ng-template #mobileContainer>
-  <app-pod-mobile></app-pod-mobile>
-</ng-template>
+  <mat-card-content>
+    <div class="pb-wrapper">
+      <mat-progress-bar mode="indeterminate" [hidden]="!isLoading"></mat-progress-bar>
+    </div>
+
+    <div [hidden]="!isDashboardReady">
+      <img mat-card-image class="imageOfTheDay" src="{{podImg}}" alt="podImg"  />
+    </div>
+    <div class="podDesc" [hidden]="!isDashboardReady">
+      {{podDescription}}
+    </div>
+
+  </mat-card-content>
+  <mat-card-footer>
+    <div class="podCopyright" [hidden]="!isDashboardReady">
+      &#169; {{podCopyRight}}
+    </div>
+    <mat-card-actions>
+      <mat-slide-toggle [(ngModel)]="isAutoRefresh" (toggleChange)="autoRefresh()">Helpful</mat-slide-toggle>
+    </mat-card-actions>
+  </mat-card-footer>
+</mat-card>

@@ -8,7 +8,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import {CdkTableModule} from '@angular/cdk/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MainComponent} from "./main.component";
-import {HeaderComponent} from "./header/header.component";
+import {HeaderComponent} from "../header/header.component";
 import {HomeComponent} from "./home/home.component";
 import {MainRoutingModule} from './main-routing.module';
 import {MatButtonModule} from "@angular/material/button";
@@ -22,14 +22,13 @@ import {PodComponent} from "./home/pod/pod.component";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {NearEarthObjComponent} from "./home/near-earth-obj/near-earth-obj.component";
-import{ ServiceWorkerModule } from '@angular/service-worker';
-import {environment} from "../../environments/environment.prod";
-import {PodComponentDesktop} from "./home/pod/pod.component.desktop";
-import {PodComponentMobile} from "./home/pod/pod.component.mobile";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import {FlexLayoutModule} from "@angular/flex-layout";
+
 
 @NgModule({
   imports: [
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MDBBootstrapModule.forRoot(),
     MatDialogModule,
     DragDropModule,
@@ -48,15 +47,16 @@ import {PodComponentMobile} from "./home/pod/pod.component.mobile";
     MatIconModule,
     MatTableModule,
     MatProgressBarModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSidenavModule,
+    MatListModule,
+    FlexLayoutModule
   ],
   declarations: [
     MainComponent,
     HeaderComponent,
     HomeComponent,
     PodComponent,
-    PodComponentDesktop,
-    PodComponentMobile,
     NearEarthObjComponent,
   ],
 
