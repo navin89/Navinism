@@ -23,6 +23,19 @@ const https = require('https');
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 let passport = require('passport');
 
+
+// Certificate
+const privKeyLocal = fs.readFileSync(process.env.PRIVATEKEY, 'utf8');
+const certLocal = fs.readFileSync(process.env.CERTIFICATE, 'utf8');
+const caLocal = fs.readFileSync(process.env.CA, 'utf8');
+
+const credentials = {
+    key: privKeyLocal,
+    cert: certLocal,
+    ca: caLocal
+};
+
+
 // CORS - Enabling cross domain request
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -48,15 +61,29 @@ app.use(csp({
     }
 }));
 
+
+// if(process.env.DEPLOY === 'LOCAL') {
+//     port = util.normalizePort(process.env.PORT || "8000");
+//     let server = https.createServer(credentialsLocal, app).listen(port, ()=> {
+//         require('log-timestamp');
+//         console.log('Navinism server started on localhost:' + port);
+//     });
+//
+// }else {
+//     port = util.normalizePort(process.env.PORT);
+//     app.listen(port);
+// }
+
 let port;
 if(process.env.DEPLOY === 'LOCAL' || process.env.DEPLOY === 'NGINX') {
     port = util.normalizePort(process.env.PORT || "8000");
 }
 
-
 app.listen(port, ()=> {
-    console.log(`Server started with port:`, port);
+    require('log-timestamp');
+    console.log(`Navinism server started on localhost:` + port);
 });
+
 
 routes(express, app, passport);
 
