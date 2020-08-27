@@ -25,10 +25,13 @@ import {NearEarthObjComponent} from "./home/near-earth-obj/near-earth-obj.compon
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {ServiceWorkerModule} from "@angular/service-worker";
+import {environment} from "../../environments/environment";
 
 
 @NgModule({
   imports: [
+    // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MDBBootstrapModule.forRoot(),
     MatDialogModule,
     DragDropModule,

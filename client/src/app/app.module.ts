@@ -18,7 +18,7 @@ import {MatTableModule} from "@angular/material/table";
 import {FormsModule} from "@angular/forms";
 import {SharedModule} from "./shared/shared.module";
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 import {ApplicationStateService} from "./application-state.service";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { MatIconModule } from "@angular/material/icon";
@@ -44,7 +44,7 @@ import { MatIconModule } from "@angular/material/icon";
     MatListModule,
     FlexLayoutModule,
     SharedModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production , registrationStrategy: 'registerImmediately'})
   ],
   providers: [RequestCache, { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true },
     CookieService, ApplicationStateService],
