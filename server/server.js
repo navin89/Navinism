@@ -24,17 +24,6 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 let passport = require('passport');
 
 
-// Certificate
-const privKeyLocal = fs.readFileSync(process.env.PRIVATEKEY, 'utf8');
-const certLocal = fs.readFileSync(process.env.CERTIFICATE, 'utf8');
-const caLocal = fs.readFileSync(process.env.CA, 'utf8');
-
-const credentials = {
-    key: privKeyLocal,
-    cert: certLocal,
-    ca: caLocal
-};
-
 
 // CORS - Enabling cross domain request
 app.use(cors());
@@ -71,6 +60,17 @@ if(process.env.DEPLOY === 'LOCAL') {
     });
 
 } else {
+    // Certificate
+    const privKeyLocal = fs.readFileSync(process.env.PRIVATEKEY, 'utf8');
+    const certLocal = fs.readFileSync(process.env.CERTIFICATE, 'utf8');
+    const caLocal = fs.readFileSync(process.env.CA, 'utf8');
+
+    const credentials = {
+        key: privKeyLocal,
+        cert: certLocal,
+        ca: caLocal
+    };
+
     port = util.normalizePort(process.env.PORT || "8000");
     https.createServer(credentials, app).listen(port, ()=> {
         // require('log-timestamp');
