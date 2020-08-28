@@ -75,14 +75,23 @@ app.use(csp({
 // }
 
 let port;
-if(process.env.DEPLOY === 'LOCAL' || process.env.DEPLOY === 'NGINX') {
+if(process.env.DEPLOY === 'LOCAL') {
     port = util.normalizePort(process.env.PORT || "8000");
+    app.listen(port, ()=> {
+        require('log-timestamp');
+        console.log(`Navinism server started on localhost:` + port);
+    });
+
+} else {
+    port = util.normalizePort(process.env.PORT || "8000");
+    https.createServer(credentials, app).listen(port, ()=> {
+        require('log-timestamp');
+        console.log('Navinism server started on localhost:' + port);
+    });
+
 }
 
-app.listen(port, ()=> {
-    require('log-timestamp');
-    console.log(`Navinism server started on localhost:` + port);
-});
+
 
 
 routes(express, app, passport);
