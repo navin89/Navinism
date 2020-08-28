@@ -74,12 +74,10 @@ if(process.env.DEPLOY === 'LOCAL') {
     port = util.normalizePort(process.env.PORT || "8000");
     https.createServer(credentials, app).listen(port, ()=> {
         require('log-timestamp');
-        console.log('Navinism server started on localhost:' + port);
+        console.log('Navinism https server started on Nginx:' + port);
     });
 
 }
-
-
 
 
 routes(express, app, passport);
