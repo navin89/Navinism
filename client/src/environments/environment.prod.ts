@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  backendUri: 'http://navinism.org',
+  backendUri: 'https://navinism.org',
   version: '0.0.4'
 };
