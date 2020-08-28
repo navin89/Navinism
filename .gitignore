@@ -35,5 +35,5 @@ testem.log
 # Project ignores
 client/src/app/shared/common/constants.ts
 server/.env
-server/cert
+server/cert/
 

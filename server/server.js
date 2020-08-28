@@ -62,18 +62,6 @@ app.use(csp({
 }));
 
 
-// if(process.env.DEPLOY === 'LOCAL') {
-//     port = util.normalizePort(process.env.PORT || "8000");
-//     let server = https.createServer(credentialsLocal, app).listen(port, ()=> {
-//         require('log-timestamp');
-//         console.log('Navinism server started on localhost:' + port);
-//     });
-//
-// }else {
-//     port = util.normalizePort(process.env.PORT);
-//     app.listen(port);
-// }
-
 let port;
 if(process.env.DEPLOY === 'LOCAL') {
     port = util.normalizePort(process.env.PORT || "8000");
