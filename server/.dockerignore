@@ -1,2 +1,12 @@
 
+../../cert
 
+../../.dockerignore
+
+../../.gitignore
+
+../../README.md
+
+../../docker-compose.yml
+
+../../test

@@ -1,16 +1,16 @@
 {
   "configVersion": 1,
-  "timestamp": 1598611361228,
+  "timestamp": 1600192896702,
   "index": "/index.html",
   "assetGroups": [
     {
-      "name": "app",
+      "name": "Navinism",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
         "/index.html",
-        "/main-es2015.0e741482171cce74ea13.js",
-        "/main-es5.0e741482171cce74ea13.js",
+        "/main-es2015.76a0bac1b75a7899d14d.js",
+        "/main-es5.76a0bac1b75a7899d14d.js",
         "/polyfills-es2015.1db1bb4bb4e3a6067d35.js",
         "/polyfills-es5.db022527a41cfa93441f.js",
         "/runtime-es2015.1eba213af0b233498d9d.js",
@@ -18,7 +18,12 @@
         "/scripts.38f4663a91ede48fca74.js",
         "/styles.027e78605e0a59c45a0d.css"
       ],
-      "patterns": []
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Roboto:300,400,500",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/s\\/roboto\\/v18\\/ KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP\\.woff2",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/s\\/materialicons\\/v41\\/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ\\.woff2"
+      ]
     },
     {
       "name": "assets",
@@ -84,10 +89,25 @@
         "/fa-solid-900.f89ad185d4d491dd5ffe.woff",
         "/smallTele.f93650b3d57214aa7fa5.gif"
       ],
-      "patterns": []
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*"
+      ]
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "api-network-first",
+      "patterns": [
+        "https:\\/\\/navinism\\.org\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 864000000,
+      "timeoutMs": 5000,
+      "version": 1
+    }
+  ],
   "hashTable": {
     "/01.f9d01435976a8cfb9daa.png": "7c046ea4b1669da4eb81acccd7fc58b00201543d",
     "/02.53687cbe6512fb70292f.png": "9775bb2755b51c9eb03a3057eaf3914dc3149a6b",
@@ -146,9 +166,9 @@
     "/fa-solid-900.792bbe12870f9e1707aa.woff2": "f3be6605dbff23cf22ec3abddd1141a81a99e3aa",
     "/fa-solid-900.e01ea526204590d06558.svg": "e8f876f36cb95ebe9134d5186ce246a97402644c",
     "/fa-solid-900.f89ad185d4d491dd5ffe.woff": "b3df05f069a5bcdf173d0c47bc01a2e6898b08c8",
-    "/index.html": "ecbfee2c2a87c43f0ae134ad24f22f1c52a102a3",
-    "/main-es2015.0e741482171cce74ea13.js": "67b25f3f59f2e54b2c76c05acc1afbe620d27c30",
-    "/main-es5.0e741482171cce74ea13.js": "b4dff57dfb0e901b3f0580299b6d84f9a1d3609b",
+    "/index.html": "05cc5254d8e0b9741bc81cc7854018be6c4d6e31",
+    "/main-es2015.76a0bac1b75a7899d14d.js": "3b266f6f3ae96452f7b6ca83db0d9fe66265febe",
+    "/main-es5.76a0bac1b75a7899d14d.js": "e7da6cfce0e138387a4fc240b9879a425c6ff20c",
     "/polyfills-es2015.1db1bb4bb4e3a6067d35.js": "16f21dcb6793dac8dfc5dc875a0c3ede042ddfeb",
     "/polyfills-es5.db022527a41cfa93441f.js": "4806d8683e039c0843ef89773c99810b95eec666",
     "/runtime-es2015.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",

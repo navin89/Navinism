@@ -46,20 +46,28 @@ app.use(csp({
         'style-src': [csp.SELF, "'unsafe-inline'", 'https://fonts.googleapis.com'],
         'font-src': [csp.SELF, 'https://fonts.gstatic.com'],
         'img-src': [csp.SELF, 'data:', process.env.PORTAL_URI],
-        'connect-src': [csp.SELF, process.env.PORTAL_URI, 'https://localhost:3010']
+        'connect-src': [csp.SELF, process.env.PORTAL_URI]
     }
 }));
 
 
 let port;
 if(process.env.DEPLOY === 'LOCAL') {
-    port = util.normalizePort(process.env.PORT || "8000");
+    port = util.normalizePort(process.env.PORT || "8080");
     app.listen(port, ()=> {
-        // require('log-timestamp');
+        require('log-timestamp');
         console.log(`Navinism server started on localhost:` + port);
     });
 
-} else {
+}
+else if (process.env.DEPLOY === 'DOCKER') {
+    port = util.normalizePort(process.env.PORT || "8080");
+    app.listen(port, ()=> {
+        require('log-timestamp');
+        console.log(`Navinism server started on docker:` + port);
+    });
+}
+else {
     // Certificate
     const privKeyLocal = fs.readFileSync(process.env.PRIVATEKEY, 'utf8');
     const certLocal = fs.readFileSync(process.env.CERTIFICATE, 'utf8');
@@ -71,9 +79,9 @@ if(process.env.DEPLOY === 'LOCAL') {
         ca: caLocal
     };
 
-    port = util.normalizePort(process.env.PORT || "8000");
+    port = util.normalizePort(process.env.PORT || "8080");
     https.createServer(credentials, app).listen(port, ()=> {
-        // require('log-timestamp');
+        require('log-timestamp');
         console.log(`Navinism https server started on Nginx:` + port);
     });
 
