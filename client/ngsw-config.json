@@ -31,7 +31,7 @@
     {
       "name": "api-network-first",
       "version": 1,
-      "urls": ["https://navinism.org/**"],
+      "urls": ["https://api.nasa.gov/**"],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 100,
