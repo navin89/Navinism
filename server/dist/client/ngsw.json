@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1600194487669,
+  "timestamp": 1600196038055,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -99,7 +99,7 @@
     {
       "name": "api-network-first",
       "patterns": [
-        "https:\\/\\/api\\.nasa\\.gov\\/.*"
+        "https:\\/\\/navinism\\.org\\/.*"
       ],
       "strategy": "freshness",
       "maxSize": 100,
