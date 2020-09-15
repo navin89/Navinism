@@ -5,7 +5,7 @@ describe("Color Code Converter API", function() {
 
     describe("RGB to Hex conversion", function() {
 
-        var url = "http://localhost:3010/api/rgbToHex?red=255&green=255&blue=255";
+        var url = "https://navinism.org/api/rgbToHex?red=255&green=255&blue=255";
 
         it("returns status 200", function(done) {
             request(url, function(error, response, body) {
@@ -26,7 +26,7 @@ describe("Color Code Converter API", function() {
 
     describe("Hex to RGB conversion", function() {
 
-        var url = "http://localhost:3010/api/hexToRgb?hex=00ff00";
+        var url = "https://navinism.org/api/hexToRgb?hex=00ff00";
 
         it("returns status 200", function(done) {
             request(url, function(error, response, body) {
@@ -50,7 +50,7 @@ describe("NASA API", function () {
 
     describe("Picture of the day api call", function() {
 
-        var url = "http://localhost:3010/api/picOfTheDaySvc";
+        var url = "https://navinism.org/api/picOfTheDaySvc";
 
         it("returns status 200", function(done) {
             request(url, function(error, response, body) {
