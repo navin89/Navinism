@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
-  "index": "/index.html",
+  "index": "index.html",
   "assetGroups": [
     {
       "name": "Navinism",
@@ -14,7 +14,8 @@
           "https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
         ]
       }
-    }, {
+    },
+    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
@@ -31,11 +32,11 @@
     {
       "name": "api-network-first",
       "version": 1,
-      "urls": ["https://navinism.org/**"],
+      "urls": ["/api/**", "/assets/**"],
       "cacheConfig": {
-        "strategy": "freshness",
+        "strategy": "performance",
         "maxSize": 100,
-        "maxAge": "10d",
+        "maxAge": "3d",
         "timeout": "5s"
       }
     }

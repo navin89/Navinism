@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1600278236966,
+  "timestamp": 1600279753655,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -99,11 +99,12 @@
     {
       "name": "api-network-first",
       "patterns": [
-        "https:\\/\\/navinism\\.org\\/.*"
+        "\\/api\\/.*",
+        "\\/assets\\/.*"
       ],
-      "strategy": "freshness",
+      "strategy": "performance",
       "maxSize": 100,
-      "maxAge": 864000000,
+      "maxAge": 259200000,
       "timeoutMs": 5000,
       "version": 1
     }
