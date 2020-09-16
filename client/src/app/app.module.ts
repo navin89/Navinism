@@ -44,7 +44,7 @@ import { MatIconModule } from "@angular/material/icon";
     MatListModule,
     FlexLayoutModule,
     SharedModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production}),
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : ServiceWorkerModule.register('/ngsw-worker.js')
   ],
   providers: [RequestCache, { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true },
     CookieService, ApplicationStateService],
