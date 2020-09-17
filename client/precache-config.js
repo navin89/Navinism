@@ -10,9 +10,9 @@ module.exports = {
       cacheId: 'ng-pwa',
       filename: 'service-worker.js',
       staticFileGlobs: [
-        'dist/index.html',
-        'dist/**.js',
-        'dist/**.css'
+        'dist/client/index.html',
+        'dist/client/**.js',
+        'dist/client/**.css'
       ],
 
     })

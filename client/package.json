@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-prod-patch": "npm version patch && node ./replace.build.js && ng build --prod && node ./versioning.build.js",
-    "build-prod-no-patch": "node ./replace.build.js && ng build --prod && node ./versioning.build.js",
+    "build-prod-no-patch": "node ./replace.build.js && ng build --prod && node ./versioning.build.js && sw-precache --root=../server/dist/client --config=precache-config.js",
     "pwa": "ng build --prod && sw-precache --root=../server/dist/client --config=precache-config.js"
   },
   "private": true,
