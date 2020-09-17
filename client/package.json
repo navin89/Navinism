@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-prod-patch": "npm version patch && node ./replace.build.js && ng build --prod && node ./versioning.build.js",
-    "build-prod-no-patch": "node ./replace.build.js && ng build --prod && node ./versioning.build.js"
+    "build-prod-no-patch": "node ./replace.build.js && ng build --prod && node ./versioning.build.js",
+    "pwa": "ng build --prod && sw-precache --root=../server/dist/client --config=precache-config.js"
   },
   "private": true,
   "dependencies": {
@@ -60,6 +61,7 @@
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "~7.0.0",
+    "sw-precache-webpack-plugin": "^1.0.0",
     "ts-node": "^8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"

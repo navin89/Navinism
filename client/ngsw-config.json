@@ -31,7 +31,7 @@
     {
       "name": "api-network-first",
       "version": 1,
-      "urls": ["/api/**", "/assets/**"],
+      "urls": ["/home"],
       "cacheConfig": {
         "strategy": "performance",
         "maxSize": 100,
