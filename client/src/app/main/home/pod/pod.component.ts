@@ -29,7 +29,7 @@ export class PodComponent extends BaseContextService implements OnInit {
 
   ngOnInit(): void {
     setTimeout(()=> {
-      console.log(`Navinism Dashboard Component loaded`);
+      // console.log(`Navinism Dashboard Component loaded`);
       setTimeout(()=> {
         this.isDashboardReadyForAvatar = true;
       }, 1000);
