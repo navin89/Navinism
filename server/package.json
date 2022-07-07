@@ -20,7 +20,7 @@
     "loadash": "^1.0.0",
     "lodash": ">=4.17.19",
     "log-timestamp": "^0.3.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.31",
     "node-fetch": "^2.6.0",
     "passport": "^0.4.1",
